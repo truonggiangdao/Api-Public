@@ -1,0 +1,54 @@
+.repost-thanks-content {
+	.user-info {
+		text-align: center;
+		margin: 5px 10px;
+	}
+
+	.username {
+		color: #777777;
+		font: 1.2em "NunitoBold";
+	}
+
+	.icon-social {
+		margin-right: 20px;
+	}
+
+	.content-main {
+		padding: 30px 25px 60px;
+
+		.cls-link {
+			padding-bottom: 10px;
+		}
+
+		.lbl-link {
+			font: 1.2em "NunitoLight";
+			color: #000;
+		}
+	}
+}
+
+@media screen and (max-width: 1023px) {
+	.repost-thanks-content {
+
+		.img-user{
+	    	height: 60px !important;
+	    }
+
+	    .user-info {
+			padding-top: 10px;
+		}
+
+		.icon-social {
+			height: 35px;
+		}
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.repost-thanks-content {
+
+		.img-user{
+	    	height: 40px !important;
+	    }
+	}
+}

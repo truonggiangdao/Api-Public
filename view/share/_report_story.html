@@ -1,0 +1,37 @@
+  <div class="custom-modal report-story-modal {{ report_state }}" id="reportModal" role="dialog" ng-controller="ReportCtrl">
+    <div class="custom-dialog report-story-dialog">
+    	<div class="report">
+    		<div class="row">
+		        <div class="col-xs-12">
+					<md-button class="btn-close-modal" aria-label="icon"  ng-click="closeReportModal()" >
+					</md-button>
+		        </div>
+		    </div>
+		    <div class="clear"></div>
+		    <div class="row content">
+				<div class="col-xs-12 text-center">
+					<img ng-src="../../img/icon_report_story.png" class="img-report"/>
+				</div>
+				<div class="col-xs-12 text-center">
+					<h1 class="title">Report this Medtale</h1>
+				</div>
+				<div class="col-xs-12 text-center mb-10">
+					<span class="lbl-report">Report this Medtale as non-appropriate. Tell us why:</span>
+				</div>
+				<div class="col-xs-12 text-center">
+					<div class="grp-checkbox"> 
+					 	<md-checkbox  aria-label="Checkbox {{chkb.id}}" class="chk-report" name="chk{{chkb.id}}" id="{{chkb.id}}"  ng-repeat="chkb in report_reason">
+				            {{chkb.report_type_name}}
+			          	</md-checkbox>
+		          	</div>
+  				</div>
+				<div class="col-xs-12 text-center enter-text">
+					<textarea rows="7" cols="50" placeholder="Enter text" class="txt-report-area" ng-model="reportTxtArea"></textarea>
+				</div>
+				<div class="col-xs-12 text-center submit-button">
+					<md-button class="btn-def btn-submit-report" ng-click="sendReport(reportTxtArea)">Submit</md-button>
+				</div>
+			</div>
+		</div>
+    </div>
+  </div>

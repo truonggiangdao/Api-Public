@@ -1,0 +1,23 @@
+.ripple-purple {
+	color: #92278f !important;
+}
+
+.btn-icon {
+	color: #92278f !important;
+}
+
+.waves-effect{
+	&.waves-main-color {
+		.waves-ripple {
+			background-color: rgba(146, 39, 143, 0.3);
+		}
+	}
+}
+
+.search-bar-container {
+	.search-bar {
+		.btn-search {
+			color: #92278f !important;
+		}
+	}
+}

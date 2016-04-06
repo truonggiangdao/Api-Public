@@ -1,0 +1,28 @@
+  <div class="custom-modal lightbox-modal {{ lightbox_state }}" id="lightboxModal" role="dialog" ng-controller="LightboxCtrl">
+    <div class="custom-dialog lightbox-dialog">
+    	<div class="lightbox-content">
+    		<div class="close-dialog-lightbox">
+				<md-button class="btn-close-modal" aria-label="icon" ng-click="closeLightbox()">
+				</md-button>
+    		</div>
+		    <img  class="img-lightbox" ng-src="{{image_url}}" />
+		    <!--<p class="des-story">
+		        Photo caption goes here as an overlay. Photo caption goes here as an overlay. Photo caption goes here as an overlay. Photo caption 
+				goes here as an overlay. Photo caption goes here as an overlay. Photo caption goes here as an overlay. Photo caption goes here 
+				as an overlay. Photo caption goes here as an overlay. Photo caption goes here as an overlay. Photo caption goes here as an overlay.  
+		    </p>
+		    <md-button class="read-more-lnk read-more-lightbox" ng-click="showExpandedStory()">
+				Read more
+			</md-button>-->
+			<div class="story-description {{ content_status }}">
+		    	<div class="description">
+		    		{{des}}
+				</div>
+
+				<md-button class="lightbox-read-more-btn" ng-click="showMore()">
+					Read more
+				</md-button>
+		    </div>
+		</div>
+    </div>
+</div>

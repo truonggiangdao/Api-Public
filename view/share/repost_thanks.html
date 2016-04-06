@@ -1,0 +1,46 @@
+  <div class="custom-modal repost-thanks-modal {{repost_thanks_state}}" id="repostThanksModal" role="dialog" ng-controller="repostThanksCtrl">
+    <div class="custom-dialog repost-thanks-dialog">
+    	<div class="repost-thanks-content">
+    		<div class="row">
+		        <div class="col-xs-10">
+		        	<div class="user-info">
+						<img ng-src="../../img/icon_repost.png" class="icon-reposted" /> 
+						<md-button ng-href="#/profile" class="btn-user btn-link" aria-label="img">
+							<img ng-src="../../img/demo_repost_user.png" class="img-user"/> 
+						</md-button>
+						<md-button ng-href="#/profile" class="username btn-link">
+							User reposted
+						</md-button>
+					</div>
+		        </div>
+		        <div class="col-xs-2">
+		        	<md-button class="btn-close-modal" aria-label="icon" ng-click="closeRepostThanksModal()">
+					</md-button>
+		        </div>
+		    </div>
+    		<div class="clear"></div>
+		    <div class="row  text-center content-main">
+				<div class="col-xs-12 cls-link">
+					<span class="lbl-link">Here is a link to your Medtale:</span>
+				</div>
+				<div class="col-xs-12 cls-link">
+					<span class="lbl-link link-share">{{repostLink}}</span>
+				</div>
+				<div class="col-xs-12 cls-link">
+					<light class="lbl-link">Share it now:</light>
+				</div>
+				<div class="col-xs-12">
+					<md-button class="btn-nav" aria-label="icon">
+						<img src="../../img/icon_social_fb.png" alt="facebook" class="icon-social">
+					</md-button>
+					<md-button class="btn-nav" aria-label="icon">
+						<img src="../../img/icon_social_tw.png" alt="twitter" class="icon-social">
+					</md-button>
+					<md-button class="btn-nav" aria-label="icon">
+						<img src="../../img/icon_social_gp.png" alt="gPus" class="icon-social">
+					</md-button>
+				</div>
+			</div>
+		</div>
+    </div>
+  </div>

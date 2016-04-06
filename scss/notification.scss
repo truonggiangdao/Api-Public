@@ -1,0 +1,241 @@
+
+header {
+	.cls-header {
+
+		.btn-notification-wp {
+
+			position: relative;
+			display: inline-block;
+
+			.notifications {
+
+				display: none;
+				width: 450px;
+				background-color: white;
+				position: absolute;
+				top: 51px;
+				right: 0px;
+				padding: 20px 10px 20px 20px;
+				background-color: #ececec;
+				border-right: 1px solid #c1c1c1;
+				border-bottom: 1px solid #c1c1c1;
+				border-left: 1px solid #c1c1c1;
+
+				font-size: 12px;
+
+				animation: fadeInUp .4s; 
+				-webkit-animation: fadeInUp .4s;
+
+				&:before {
+					display: block;
+					content: "";
+					position: absolute;
+					width: 19px;
+					height: 19px;
+					top: -10px;
+					right: 15px;
+					background-color: #ececec;
+					border-top: 1px solid #c1c1c1;
+					border-left: 1px solid #c1c1c1;
+					transform: rotate(45deg);
+				}
+			}
+
+			.notification-number-wrapper {
+				display: block;
+				float: left;
+				width: 20px;
+				height: 20px;
+				border-radius: 50%;
+				background-color: red;
+				position: absolute;
+				top: 10px;
+				left: 10px;
+				text-align: center;
+
+				.notification-number {
+					color: white;
+					font-size: 12px;
+					width: 12px;
+					height: 12px;
+					display: block;
+					float: left;
+
+					position: relative;
+					bottom: 10px;
+					left: 4px;
+				}
+			}
+		}
+
+		&.showNotification {
+			.btn-notification-wp {
+				.notifications {
+					display: block;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	header {
+		.cls-header {
+			.btn-notification-wp {
+				.notification-number-wrapper {
+					top: 10px;
+					left: 10px;
+				}
+			}
+		}
+	}
+}
+
+.notification-item {
+
+	padding-bottom: 10px;
+
+	.noti-img, .noti-text {
+		display: block;
+		float: left;
+	}
+
+	.noti-img {
+		width: 42px;
+		height: 42px;
+		margin-right: 10px;
+
+		.md-button {
+			width: 100%;
+			height: 100%;
+			background-color: gray;
+			border-radius: 0;
+		}
+	}
+
+	.noti-text {
+		max-width: calc(100% - 60px);
+		color: #5B055D;
+		font-size: 1.1em;
+		margin-top: 7px;
+		text-align: left;
+		line-height: 0.9em;
+	}
+
+	.btn-view-more {
+		width: 100%;
+		border-top: 1px solid #92278f;
+		padding: 0px 0px 10px;
+		height: auto;
+		font-size: 1.3em;
+		border-radius: 0;
+		color: #92278f;
+		font-family: "NunitoBold";
+		text-transform: capitalize;
+	}
+}
+
+#section-notification-mobile {
+	/* state holder */
+	.notifications-mobile {
+		display: none;
+		font-size: 12px;
+		position: absolute;
+		z-index: 11;
+		top: 0px;
+		left: 0;
+		width: 100%;
+
+		animation: slideLeft .5s; 
+		-webkit-animation: slideLeft .5s;
+		
+		.notification-wrapper {
+
+			.notification-list {
+
+				-webkit-box-shadow: inset 0 10px 10px -10px rgb(0,0,0);
+		    	-moz-box-shadow: inset 0 10px 10px -10px rgb(0,0,0);
+		    	box-shadow: inset 0 10px 10px -10px rgb(0,0,0);
+
+				padding: 20px;
+				background-color: #ececec;
+				width: 100%;
+			}
+		}
+
+		.showOnMore {
+			display: none;
+		}
+
+		&.showNotificationMore {
+			.showOnMore {
+				display: block;
+				animation: slideLeft .5s; 
+				-webkit-animation: slideLeft .5s;
+			}
+
+			.view-more {
+				display: none;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	header {
+		.cls-header.showNotification {
+			.btn-notification-wp {
+				.notifications {
+					position: fixed;
+					top: 61px;
+					bottom: 0;
+					left: 0;
+					width: 100%;
+
+					.notification-list {
+						height: 100% !important;
+					}
+
+					&:before {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+
+	.notification-item {
+
+		.noti-text {
+			line-height: 1.1em;
+			margin-top: 0px;
+		}
+	}
+
+	.custom-scroll {
+		overflow: hidden;
+	}
+}
+
+@media screen and (max-width: 420px) {
+	
+}
+
+.load-more {
+	position: absolute; 
+	bottom: 0px; 
+	text-align: center;
+	height: 35px; 
+	display:none;
+	width: 100%;
+    background: url("../../img/icon_loading.png") no-repeat 50% 11px;
+    background-size: 25px auto;
+}
+
+.notification-list {
+	.mCustomScrollBox mCS-light {
+		.mCSB_container {
+			padding-bottom: 50px;
+		}
+	}
+}

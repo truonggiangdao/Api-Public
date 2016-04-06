@@ -1,0 +1,345 @@
+/* Submit story success*/
+@import 'submit_story_success';
+
+.submit-story {
+	background-color: white;
+
+	.cls-upload {
+		margin: 0 30px 25px;
+
+		.upload-item {
+			.img-upload {
+				width: 100%;
+				height: 250px;
+			}
+
+			.add {
+		        position:absolute;    
+		        color: white;
+		        left: 0;
+	            top: 80px;
+		        text-align: center;
+		        width: 100%;
+		        font-size: 35px;
+		    }
+
+		    .txt-upload {
+		        position:absolute;    
+		        color: white;
+		        left: 0;
+	            top: 120px;
+		        text-align: center;
+		        width: 100%;
+		        font: 24px 'NunitoLight';
+		    }
+		}
+
+		.preview-item {
+			padding-top: 3px;
+
+			.lbl-photo {
+				color: #b5b5b6;
+				padding-left: 15px;
+			}
+
+			.lbl-photo-desktop {
+				display: block;
+				height: 32px;
+				font-size: 24px;
+			}
+
+			.lbl-photo-mobile {
+				font-family: "NunitoLight";
+			}
+
+			.cls-preview {
+				margin: 0 -6px;
+
+				&.preview-custom {
+					margin: 0 -6px 0 8px;
+				}
+			}
+
+			.cls-img-preview {
+			    padding: 0 6px;
+			}
+
+			.img-preview {
+				width: 100%;
+			}
+		}
+	}
+
+	.story-detail {
+		margin: 0 30px 25px;
+
+		textarea {
+			width: 100%;
+			padding: 10px;
+			color: #000;
+			font: 1em 'NunitoLight';
+		}
+
+		::-webkit-input-placeholder {
+		    color: #000;
+		}
+
+		:-moz-placeholder {
+		    color: #000;
+		}
+
+		::-moz-placeholder {
+		    color: #000;
+		}
+
+		:-ms-input-placeholder {
+			color: #000;
+		}
+	}
+
+	.story-rule {
+		margin: 0 30px 10px;
+
+		.lnk-here {
+			font: 1em 'NunitoBold';
+			color: #92278f;
+		}
+
+		a:hover {
+			text-decoration: none;
+		}
+	}
+
+	.submit-state {
+		padding-bottom: 50px;
+		text-align: center;
+
+		.icon-logo {
+			height: 45px;
+			width: auto;
+		}
+
+		.txt-choose {
+			color: #410843;
+		    font-family: "NunitoRegular";
+		}
+
+		.action {
+			padding-top: 15px;
+
+			.item-submit-story, .item-submit-ano {
+				display: -webkit-box;
+			    display: -ms-flexbox;
+			    display: -webkit-flex;
+			    display: flex;
+			    flex-direction: row;
+		        justify-content: flex-end;
+			}
+
+			.item-submit-ano {
+				justify-content: flex-start;
+			}
+
+			.item-submit{
+				padding: 5px 0 0 10px;
+			}
+		}
+	}
+}
+
+.preview-item-desktop {
+	display: block;
+}
+
+
+.preview-item-mobile {
+	display: none;
+}
+
+@media screen and (max-width: 1023px) {
+
+    .submit-story {
+    	width: 100%;
+
+    	.cls-upload {
+			margin: 0 -15px;
+
+			.upload-item {
+				width: 100%;
+
+				.img-upload {
+					height: 300px;
+				}
+
+				.add {
+		            top: 100px;
+			    }
+
+			    .txt-upload {
+		            top: 130px;
+			    }
+			}
+
+			.preview-item {
+				width: 100%;
+
+				.lbl-photo {
+					padding: 10px 0 5px 20px
+				}
+			}
+
+			.cls-preview-mobile {
+				padding: 0 4px 0 2px;
+			}
+		}
+
+		.story-detail {
+			margin: 10px 20px 25px 20px;
+
+			textarea {
+				font-size: 0.7em;
+			}
+		}
+
+		.story-rule {
+		    margin: 0 20px 50px;
+
+		    .txt-rule{
+		    	font-size: 0.6em;
+		    }
+		}
+
+		.submit-state {
+
+			.txt-choose {
+				font-size: 0.7em;
+			}
+
+			.icon-logo {
+				height: 56px;
+			}
+
+			.action {
+				padding-top: 50px;
+
+				.item-submit {
+					padding: 10px 0;
+				}
+
+				.item-submit-story, .item-submit-ano {
+					display: block;
+				}
+
+				.item-submit-story {
+					text-align: right;
+					padding: 0 6px 0 0;
+
+					.logo-user {
+						padding-right: 104px;
+					}
+				}
+
+				.item-submit-ano {
+					text-align: left;
+				    padding: 0 0 0 6px;
+
+					.logo-ano {
+						padding-left: 104px;
+					}
+				}
+			}
+		}
+    }
+
+    .preview-item-desktop {
+		display: none;
+	}
+
+
+	.preview-item-mobile {
+		display: block;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.submit-story  {
+
+		.story-detail {
+		    margin: 10px 10px 25px 10px;
+		}
+
+		.story-rule {
+		    margin: 0 10px 20px;
+		}
+
+		.submit-state {
+			.icon-logo  {
+				height: 44px;
+			}
+
+			.action {
+		    	padding-top: 26px;
+
+				.item-submit-story {
+					.logo-user {
+						padding-right: 77px;
+					}
+				}
+
+				.item-submit-ano {
+					.logo-ano {
+						padding-left: 77px;
+					}
+				}
+			}
+		}
+
+		.cls-upload {
+			.preview-item {
+				.lbl-photo {
+					padding-left: 10px;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.submit-story  {
+		.submit-state {
+			.action {
+				.item-submit-story {
+					.logo-user {
+						padding-right: 59px;
+					}
+				}
+
+				.item-submit-ano {
+					.logo-ano {
+						padding-left: 59px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 360px) {
+	.submit-story  {
+		.submit-state {
+			.action {
+				.item-submit-story {
+					.logo-user {
+						padding-right: 48px;
+					}
+				}
+
+				.item-submit-ano {
+					.logo-ano {
+						padding-left: 48px;
+					}
+				}
+			}
+		}
+	}
+}

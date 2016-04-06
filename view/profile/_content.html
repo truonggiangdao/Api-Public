@@ -1,0 +1,109 @@
+<!--header content-->
+<div class="container-fluid header-profile" ng-controller="ContentProfileCtrl">
+	<div class="row profile-user">
+		<div class="col-xs-5 user-info">
+			<div class="info-user-desktop">
+				<md-button ng-href="#/profile" class="txt-username btn-link">
+					<span>{{username}}</span>
+				</md-button><br/>
+				<span class="txt-info">{{hospital_affiliation}}</span><br/>
+				<span class="txt-info">City, State</span>
+			</div>
+			<div class="info-user-mobile">
+				<div class="logo-user">
+					<md-button ng-href="/view/profile" class="btn-user btn-link" aria-label="img">
+						<img ng-src="{{profile_image}}" class="img-user-profile"/>
+					</md-button>
+				</div>
+				<div class="details-user">
+					<div class="user">
+						<md-button ng-href="/view/profile" class="txt-username btn-link">
+							<span>{{username}}</span>
+						</md-button><br/>
+						<span class="txt-info">{{hospital_affiliation}}</span><br/>
+						<span class="txt-info">City, State</span>
+					</div>
+					<div class="following">
+						<md-button class="btn-def" ng-class="'{1}' == 1? 'btn-following' : 'btn-follow'" 
+							ng-click="changeStatus($event)" aria-label="img" ng-if="is_myprofile =='false'">
+						</md-button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-xs-7 data-info">
+			<div class="data-info-desktop">
+				<div class="item-data" ng-class="{active:isSet('follower')}">
+					<md-button  class="btn-profile" ng-click="setTab('follower')">
+						<span class="txt-number">{{numFollowers}}</span> <br/>
+						Followers
+					</md-button>
+				</div>
+				<div class="item-data" ng-class="{active:isSet('following')}">
+					<md-button class="btn-profile" ng-click="setTab('following')">
+						<span class="txt-number">{{numFollowing}}</span> <br/>
+						Following
+					</md-button>
+				</div>
+				<div class="item-data" ng-class="{active:isSet('medtales')}">
+					<md-button  class="btn-profile" ng-click="setTab('medtales')">
+						<span class="txt-number">{{numMedtales}}</span> <br/>
+						Medtales
+					</md-button>
+				</div>
+				<div class="item-data" ng-class="{active:isSet('repost')}">
+					<md-button  class="btn-profile" ng-click="setTab('repost')">
+						<span class="txt-number">{{numReposts}}</span> <br/>
+						Reposts
+					</md-button>
+				</div>
+				<div class="item-data item-btn-follow item-btn-following">
+					<md-button class="btn-def" ng-class="1 == 1? 'btn-following' : 'btn-follow'" 
+						ng-click="changeStatus($event)" ng-if="is_myprofile =='false'" aria-label="img">
+					</md-button>
+				</div>
+			</div>
+			<div class="data-info-mobile">
+				<div class="col-xs-3 no-pr no-pl item-data" ng-class="{active:isSet('follower')}">
+					<md-button  class="btn-profile" ng-click="setTab('follower')">
+						<span class="txt-number">{{numFollowers}}</span> <br/>
+						Followers
+					</md-button>
+				</div>
+				<div class="col-xs-3 no-pr no-pl item-data" ng-class="{active:isSet('following')}">
+					<md-button  class="btn-profile" ng-click="setTab('following')">
+						<span class="txt-number">{{numFollowing}}</span> <br/>
+						Following
+					</md-button>
+				</div>
+				<div class="col-xs-3 no-pr no-pl item-data" ng-class="{active:isSet('medtales')}">
+					<md-button  class="btn-profile" ng-click="setTab('medtales')">
+						<span class="txt-number">{{numMedtales}}</span> <br/>
+						Medtales
+					</md-button>
+				</div>
+				<div class="col-xs-3 no-pr no-pl item-data" ng-class="{active:isSet('repost')}">
+					<md-button  class="btn-profile" ng-click="setTab('repost')">
+						<span class="txt-number">{{numReposts}}</span> <br/>
+						Reposts
+					</md-button>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+	<div class="user-profile-desktop">
+		<md-button ng-href="#/profile" class="btn-user btn-link" aria-label="img">
+			<img ng-src="{{profile_image}}" class="img-user-profile"/>
+		</md-button>
+	</div>
+</div>
+
+<div class="content-profile">
+	<!-- Grid page -->
+	 <div ng-include="'view/share/_grid_main.html'" class="pt-2 {{ grid_state }}"></div>
+
+	<!-- List user's followers -->
+	 <div ng-include="'view/profile/_user_followers.html'" class="pt-2 {{ user_follower_state }}"></div>
+</div>

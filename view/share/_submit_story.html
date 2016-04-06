@@ -1,0 +1,158 @@
+<div class="modal fade submit-story-modal no-pl" id="submitStoryModal" role="dialog" ng-controller="SubmitStoryCtrl">
+
+	<div class="modal-dialog submit-story-dialog">
+
+		<div class="submit-story">
+	    	<div class="row">
+		        <div class="col-xs-12">
+					<md-button class="btn-close-modal" aria-label="icon"  data-dismiss="modal" ng-click="setSubmitFormDefault()">
+					</md-button>
+		        </div>
+	    	</div>
+	    	<div class="clear"></div>
+
+	    	<form name="createStoryForm" class="createStoryForm">
+		    	<div class="row cls-upload">
+		    		<input type="file" name="files[]" id="files" class="hide" multiple ng-model-instant onchange="angular.element(this).scope().imageUpload(event)">
+		    		<div class="col-xs-6 no-pr no-pl upload-item">
+		    			<label class="imageupload" for="files"></label>
+		    			<img ng-src="../../img/demo_upload_logo.png" class="img-upload" />
+		    			<span class="add">+</span>
+		    			<span class="txt-upload">Upload photos</span>
+		    		</div>	
+		    		<div class="col-xs-6 no-pr preview-item preview-item-desktop">
+		    			<light class="lbl-photo lbl-photo-desktop"> Photo preview</light>
+		    			<div class="col-xs-12 no-pl no-pr mb-10 cls-preview preview-custom">
+		    				<div class="col-xs-4 cls-img-preview">
+		    					<md-button class="btn-img image-details bg-full-width" ng-click="deleteImg(0)" aria-label="img" style="background-image: url({{photo0.src}})" >
+		    					</md-button>
+		    				</div>
+		    				<div class="col-xs-4 cls-img-preview">
+		    					<md-button class="btn-img image-details bg-full-width" ng-click="deleteImg(1)" aria-label="img" style="background-image: url({{photo1.src}})" >
+		    					</md-button>
+		    				</div>
+		    				<div class="col-xs-4 cls-img-preview">
+		    					<md-button class="btn-img image-details bg-full-width" ng-click="deleteImg(2)" aria-label="img" style="background-image: url({{photo2.src}})" >
+		    					</md-button>
+		    				</div>
+		    			</div>
+		    			<div class="col-xs-12 no-pl no-pr cls-preview preview-custom">
+		    				<div class="col-xs-4 cls-img-preview">
+		    					<md-button class="btn-img image-details bg-full-width" ng-click="deleteImg(3)" aria-label="img" style="background-image: url({{photo3.src}})" >
+		    					</md-button>
+		    				</div>
+		    				<div class="col-xs-4 cls-img-preview">
+		    					<md-button class="btn-img image-details bg-full-width" ng-click="deleteImg(4)" aria-label="img" style="background-image: url({{photo4.src}})" >
+		    					</md-button>
+		    				</div>
+		    				<div class="col-xs-4 cls-img-preview">
+		    					<md-button class="btn-img image-details bg-full-width" ng-click="deleteImg(5)" aria-label="img" style="background-image: url({{photo5.src}})" >
+		    					</md-button>
+		    				</div>
+		    			</div>
+		    		</div>	
+		    		<div class="col-xs-6 no-pr preview-item preview-item-mobile">
+		    			<h1 class="lbl-photo"> Photo preview</h1>
+		    			<div class="col-xs-12 mb-10 cls-preview cls-preview-mobile">
+		    				<div class="col-xs-2 cls-img-preview">
+		    					<md-button class="btn-img image-details bg-full-width" ng-click="deleteImg(0)" aria-label="img" style="background-image: url({{photo0.src}})" >
+		    					</md-button>
+		    				</div>
+		    				<div class="col-xs-2 cls-img-preview">
+		    					<md-button class="btn-img image-details bg-full-width" ng-click="deleteImg(1)" aria-label="img" style="background-image: url({{photo1.src}})" >
+		    					</md-button>
+		    				</div>
+		    				<div class="col-xs-2 cls-img-preview">
+		    					<md-button class="btn-img image-details bg-full-width" ng-click="deleteImg(2)" aria-label="img" style="background-image: url({{photo2.src}})" >
+		    					</md-button>
+		    				</div>
+		    				<div class="col-xs-2 cls-img-preview">
+		    					<md-button class="btn-img image-details bg-full-width" ng-click="deleteImg(3)" aria-label="img" style="background-image: url({{photo3.src}})" >
+		    					</md-button>
+		    				</div>
+		    				<div class="col-xs-2 cls-img-preview">
+		    					<md-button class="btn-img image-details bg-full-width" ng-click="deleteImg(4)" aria-label="img" style="background-image: url({{photo4.src}})" >
+		    					</md-button>
+		    				</div>
+		    				<div class="col-xs-2 cls-img-preview">
+		    					<md-button class="btn-img image-details bg-full-width" ng-click="deleteImg(5)" aria-label="img" style="background-image: url({{photo5.src}})" >
+		    					</md-button>
+		    				</div>
+		    			</div>
+		    		</div>
+		    	</div>
+		    	<span class="invalid-msg-image" ng-show="showMsgErrorImage">{{msgError}}</span>
+		    	<div class="row story-detail">
+		    		<div class="col-xs-12 no-pl no-pr mb-20">
+		    			<input type="url" name="link_youtube" class="txt-def txt-video-link" ng-model="story.link_video" placeholder="Post a video from YouTube:   https://youtube.com/xxxxxx " ng-pattern="/(://www.youtube.com|://youtu.be|://m.youtube.com)/[A-Za-z0-9]+/">
+		    			<span class="invalid-msg" ng-show="createStoryForm.link_youtube.$dirty && createStoryForm.link_youtube.$invalid">
+		    				<span ng-show="createStoryForm.link_youtube.$error.url">That is not a valid youtube link.</span>
+		    				<span ng-show="!createStoryForm.link_youtube.$error.url && createStoryForm.link_youtube.$error.pattern">There is something wrong with that Youtube link, please recheck it.</span>
+		    			</span>
+		    		</div>
+		    		<div class="col-xs-12 no-pl no-pr mb-20">
+		    			<input type="text" class="txt-def" name="title" ng-model="story.title" placeholder="Enter the story title:" required ng-maxlength="40">
+		    			<span class="invalid-msg" ng-show="createStoryForm.title.$dirty && createStoryForm.title.$invalid">
+		    				<span ng-show="createStoryForm.title.$error.required">Story Title is required.</span>
+		    				<span ng-show="!createStoryForm.title.$error.required && createStoryForm.title.$error.maxlength">Please keep your Story Title under 40 chars</span>
+		    			</span>
+		    		</div>
+		    		<div class="col-xs-12 no-pl no-pr mb-20">
+		    			<textarea rows="10" cols="50" name="description" ng-model="story.description" placeholder="Tell us your story: " ng-maxlength="5000" required></textarea>
+		    			<span class="invalid-msg" ng-show="createStoryForm.description.$dirty && createStoryForm.description.$invalid" >
+		    				<span ng-show="createStoryForm.description.$error.required">Your story is required.</span>
+		    				<span ng-show="createStoryForm.description.$error.maxlength">Please keep your story under 5000 characters.</span>
+		    			</span>
+		    		</div>
+
+		    		<div class="col-xs-12 no-pl no-pr" style="position:relative;">
+		    			<input type="text" name="hospital_autocomplete" ng-model="hospital_autocomplete" id="hospital_autocomplete" ng-keyup="completeHospital()" class="txt-def" placeholder="Enter the Hospital Name your Medtale is about:" ng-maxlength="40">
+		    			{{createStoryForm.hospital_Name.$error.maxlength}}
+		    			<span class="invalid-msg" ng-show="createStoryForm.hospital_autocomplete.$dirty && createStoryForm.hospital_autocomplete.$invalid" >
+		    				<span ng-show="createStoryForm.hospital_autocomplete.$error.maxlength">Please keep your hospitlal name to under 40 characters.</span>
+		    			</span>
+		    		</div>
+		    		<span class="invalid-msg" ng-show="showMsg">Please input require fields with valid values(Story title, Your story)</span>
+		    	</div>
+
+		    	<div class="row story-rule">
+		    		<div class="col-xs-12 no-pl no-pr">
+			    		<p class="txt-rule">
+			    			Medtales official rules of submission: Medtales official rules of submission: <br />
+							Read full Terms and Conditions 
+							<a ng-href="#" class="lnk-here">
+								HERE
+							</a>
+			    		</p>
+		    		</div>
+		    	</div>
+	    	
+		    	<div class="row submit-state">
+		    		<h5 class="txt-choose">How would you like to submit? (Choose one)</h5>
+		    			<div class="col-xs-12 action">
+		    				<div class="col-xs-6 item-submit-story ">
+		    					<div class="item-logo logo-user">
+				    				<img ng-src="../../img/icon_user.png" class="icon-logo"/>
+				    			</div>
+				    			<div class="item-submit">
+				    				<md-button class="btn-submit-def btn-submit-story" ng-click="createStoryForm.$valid ? submitMyStory(story) : showMsgInvalidForm()">Submit my story</md-button>
+				    			</div>
+			    			</div>
+			    			<div class="col-xs-6 item-submit-ano">
+			    				<div class="item-logo logo-ano">
+				    				<img ng-src="../../img/icon_hipaa_protected.png" class="icon-logo"/>
+				    			</div>
+				    			<div class="item-submit">
+				    				<md-button class="btn-submit-def btn-submit-anonymously" ng-click="createStoryForm.$valid ? submitAnonymously(story) : showMsgInvalidForm()">Submit Anonymously</md-button>
+				    			</div>
+			    			</div>
+		    			</div>
+		    		</div>
+		    	</div>
+		    </form>	
+		</div>
+	</div>
+</div>
+
+<!--error message-->
+<div ng-include="'view/share/_error_message.html'"></div>

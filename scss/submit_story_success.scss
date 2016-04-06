@@ -1,0 +1,84 @@
+
+.submit-story-success {
+	.content-main {
+		padding: 75px 0 200px;
+		text-align: center;
+		margin: 0;
+
+		.cls-message {
+			margin-bottom: 25px;
+		}
+
+		.cls-link {
+			margin-bottom: 10px;
+		}
+
+		.message {
+			font: 2em 'NunitoLight';
+			color: #b5b5b6;
+		}
+
+		.lbl-link {
+			font: 1.2em 'NunitoLight';
+			color: #000;
+		}
+
+		.icon-social {
+			height: 27px;
+			padding: 0 15px 0 15px;
+		}
+	}
+}
+
+@media screen and (max-width: 1023px) {
+
+    .submit-story-success {
+		background-color: white;
+
+		.content-main {
+			.cls-message {
+				margin-bottom: 40px;
+			}
+
+			.cls-link {
+				margin-bottom: 20px;
+			}
+
+			.icon-social {
+				height: 35px;
+				padding: 0 20px 0 20px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.link-share {
+		width: 585px;
+	 	overflow:hidden;
+	  	display:inline-block;
+	  	text-overflow: ellipsis;
+	  	white-space: nowrap;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.link-share {
+		width: 445px;
+		line-height: 20px !important;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.link-share {
+		width: 287px;
+	}
+
+	.submit-story-success {
+		.content-main {
+			.icon-social {
+				padding: 0 10px 0 10px;
+			}
+		}
+	}
+}

@@ -1,0 +1,55 @@
+<div class="login-modal login-step-5">
+	<div class="login-content">
+
+		<div class="row mb-30">
+			<div class="col-xs-12 text-center">
+				<h4>Create a MedTales Account</h4>
+			</div>
+		</div>
+
+		<form name="emailPassForm">
+			<div class="row mb-15">
+				<div class="col-xs-12">
+					<div class="input-field">
+	        			<label for="create_email" class="left-110" ng-show="lblEmail">Email</label>
+	        			<input id="create_email" name="email" type="email" class="validate input-border-gray" ng-model="info.email" required>
+	        		</div>
+				</div>
+				<span class="invalid-msg" ng-show="emailPassForm.email.$dirty && emailPassForm.email.$invalid">
+    				<span ng-show="emailPassForm.email.$error.required">Email is required.</span>
+    				<span ng-show="emailPassForm.email.$error.email">Email Address is incorrect format.</span>
+    			</span>
+				<span ng-show="msgError" class="invalid-msg">The current email is in use, please change it now.</span>
+			</div>
+
+			<div class="row mb-15">
+				<div class="col-xs-12">
+					<div class="input-field">
+						<label for="create_password" class="left-100">Password</label>
+	        			<input id="create_password" name="pass" type="password" class="validate input-border-gray" ng-model="info.pass" ng-minlength="6" ng-maxlength="16" required>
+	        		</div>
+				</div>
+				<span class="invalid-msg" ng-show="emailPassForm.pass.$dirty && emailPassForm.pass.$invalid">
+    				<span ng-show="emailPassForm.pass.$error.required">Password is required.</span>
+    				<span ng-show="!emailPassForm.pass.$error.required && (emailPassForm.pass.$error.minlength || emailPassForm.pass.$error.maxlength)">Password between 6 and 16 characters</span>
+    			</span>
+			</div>
+
+			<div class="row mb-10">
+				<div class="col-xs-12">
+					<a class="waves-effect waves-light btn btn-material btn-pink full-width" ng-click="updateEmailPassword(info)">
+						<!--<span>Create</span>--><span>Log in</span>
+					</a>
+				</div>
+			</div>
+		</form>
+		<div class="row">
+			<div class="col-xs-12">
+				<a class="waves-effect waves-main-color btn btn-material text-btn full-width" ng-click="goBackToSetProfilePicture()">
+					<span>&lt; Back</span>
+				</a>
+			</div>
+		</div>
+
+	</div>
+</div>

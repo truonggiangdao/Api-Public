@@ -1,0 +1,495 @@
+/* Report story*/
+@import 'report_story';
+
+/* Delete story*/
+@import 'delete_story';
+
+.expanded-story {
+	.story{
+		background-color: white;
+
+		&.gallery{
+			background-color: #e4f2e7;
+		}
+	}
+
+	.header-content {
+		float: right;
+		padding: 10px 20px 10px 0;
+
+		.nav-icon{
+			height: 25px;
+		}
+	}
+
+	.slider-content{
+	
+		.slider {
+		    width: 100%;
+		    /*height: 480px;*/
+		    overflow: hidden;
+		    position: relative;
+		}
+
+		.slide {
+		    //position: absolute;
+		    top: 0;
+		    left: 0;
+		}
+
+		.arrow {
+		    position: absolute;
+		    z-index: 1002;
+		    display: block;
+		    top: 50%;
+		    margin-top: -35px;
+		    outline: none;
+		    cursor: pointer;
+		}
+
+		.arrow.prev img,.arrow.next img{
+			height: 22px;
+		}
+
+		.arrow.prev {
+		    left: 25px;
+		    transition: 0.2s linear all;
+		}
+
+		.arrow.next {
+		    right: 25px;
+		    transition: 0.2s linear all;
+		}
+
+
+		.nonDraggableImage{
+		    -webkit-user-drag: none;
+		    width: 100%;
+		    /*min-height: 480px;*/
+		}
+	}
+
+	.action-content {
+		margin: 15px 0;
+
+		.action-left{
+			.img-user{
+				height: 30px !important;
+				width: auto;
+			}
+
+			.username{
+				color: #777777;
+				margin: 0 20px 0 0;
+				font: 0.9em "NunitoBold";
+			}
+		}
+
+		.action-right{
+	    	display: -webkit-box;
+		    display: -ms-flexbox;
+		    display: -webkit-flex;
+		    display: flex;
+		    flex-direction: row;
+		    justify-content: flex-end;
+
+		    .action-item{
+		    	display: -webkit-inline-flex;
+				display: -ms-inline-flexbox;
+				display: inline-flex;
+		    	padding-right: 20px;
+		    }
+
+		    .action-item:last-child{
+		    	padding-right: 0px;
+		    }
+
+			.action-item >img{
+				width: auto;
+				vertical-align: middle;
+				display: inline;
+			}
+
+			.txt-number{
+				color: #808285;
+				font: 0.8em "NunitoRegular";
+			}
+	    }
+	}
+
+	.grid-content{
+		.img-item{
+			width: 100%;
+			height: 235px;
+		}
+
+		.cls-item{
+			margin-bottom: 10px;
+		}
+
+		.item-r{
+			padding-right: 5px;
+		}
+
+		.item-l{
+			padding-left: 5px;
+		}
+	}
+
+	.expanded-story-detail{
+		margin: 25px 25px 0 25px;
+		.story-title {
+			color: #4c0055;
+		    font-family: 'NunitoBold';
+		}
+
+		.des-story{
+			color: #000;
+		}
+	}
+
+	.item-action {
+    	margin: 15px 15px 30px 10px;
+    }
+	    
+    .fb-content{
+    	background-color: white;
+    	margin: 0;
+
+    	.fb-plugin{
+			height: 461px;
+		 	overflow-y: scroll;
+	 	    text-align: center;
+    		width: 100%;
+		}
+    }
+
+
+    .hospital-name {
+    	margin: 15px 0 15px 25px;
+
+    	p {
+    		color: #777;
+    		font-family: "NunitoBold";
+		    margin-bottom: 15px;
+    	}
+    }
+
+    .detail-story-mobile {
+    	display: none;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+	.expanded-story {
+		.header-content{
+
+			.nav-icon{
+				height: 43px;
+			}
+		}
+
+		.slider-content{
+
+			.slider{
+				/*height: 540px;*/
+			}
+
+			.arrow.prev img,.arrow.next img{
+				height: 36px;
+			}
+
+			.arrow.next{
+				right: 35px;
+			}
+
+			.arrow.prev{
+				left: 35px;
+			}
+		}
+
+		.grid-content{
+			.img-item{
+				height: 250px;
+			}
+
+			.cls-item{
+				margin-bottom: 20px;
+			}
+
+			.item-r{
+				padding-right: 10px;
+			}
+
+			.item-l{
+				padding-left: 10px;
+			}
+		}
+
+		.action-content{
+
+			.action-left{
+				.img-user{
+					height: 60px !important;
+				}
+
+				.username {
+					font-size: 0.7em;
+					display: inline-block;
+				  	vertical-align: middle;
+				  	line-height: 20px;
+				  	padding-top: 6px;
+				}
+			}
+
+			.action-right {
+				.action-item {
+				    padding-right: 12px;
+				}
+			}
+		}
+
+		.detail-story-desktop {
+	    	display: none;
+	    }
+
+		.detail-story-mobile {
+	    	display: block;
+	    }
+	}
+}
+
+@media screen and (max-width: 900px) {
+
+	.expanded-story {
+		.slider-content{
+
+			.slider{
+				/*height: 460px;*/
+			}
+		}
+
+		.action-content {
+
+			.action-right {
+
+				.action-item {
+					padding-right: 15px; 
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.expanded-story {
+		.header-content {
+			.md-button {
+				margin-left: 0px;
+				margin-right: 0px;
+
+				&.btn-close-modal {
+					margin-left: 10px;
+					margin-right: 5px;
+				}
+
+				&.btn-story-single, &.btn-story-gallery {
+					background-size: 23px;
+    				background-position: 50%;
+				}
+			}
+		}
+
+		.slider-content {
+			.arrow {
+				&.prev, &.next {
+					img {
+						height: 22px;
+					}
+				}
+			}
+		}
+
+		.detail-story {
+			.detail-story-mobile {
+				.action-content {
+					margin: 5px 0;
+
+					.action-left {
+						.img-user {
+							height: 55px !important;
+						}
+
+						.username {
+							font-size: 0.85em;
+						}
+					}
+
+					.action-right {
+						.action-item {
+							.icon-report {
+								height: 25px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 720px) {
+
+	.expanded-story {
+
+		.action-content {
+
+			.action-right {
+				.action-item {
+					padding-right: 10px;
+				}
+
+				.txt-number {
+					font-size: 0.6em;
+				}
+			}
+		}
+
+		.slider-content {
+
+			.arrow.next {
+				right: 30px;
+			}
+
+			.arrow.prev{
+				left: 30px;
+			}
+		}
+	}
+
+
+	.fb_iframe_widget {
+		width: 450px !important;
+
+		span {
+			width: 100% !important;
+		}
+
+		iframe {
+			width: 100% !important;
+		}
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.expanded-story {
+
+		.header-content{
+			padding: 5px 25px 5px 0;
+
+			.nav-icon{
+				height: 33px;
+			}
+		}
+
+		.action-content {
+
+			.action-right {
+				.action-item {
+					padding-right: 8px;
+				}
+			}
+		}
+
+		.grid-content {
+			
+			.cls-item{
+			    margin-bottom: 10px;
+			}
+			
+			.item-l {
+				padding-left: 5px;
+			}
+
+			.item-r {
+				padding-right: 5px;
+			}
+		}
+
+		.expanded-story-detail {
+			margin: 15px 15px 0 15px;
+		}
+
+		.hospital-name {
+	    	margin: 15px 0 15px 15px;
+	    }
+	}
+
+}
+
+@media screen and (max-width: 480px) {
+	.expanded-story {
+
+		.slider-content{
+
+			.slider{
+				/*height: 360px;*/
+			}
+
+			.arrow.next {
+				right: 20px;
+			}
+
+			.arrow.prev{
+				left: 20px;
+			}
+		}
+
+		.grid-content {
+			.img-item {
+				height: 180px;
+			}
+		}
+		.action-content {
+
+			.action-right {
+				padding-right: 5px;
+
+				.action-item {
+					padding-right: 5px;
+				}
+
+				.txt-number {
+					font-size: 0.55em;
+				}
+			}
+		}
+	}
+
+	.fb_iframe_widget {
+		width: 320px !important;
+	}
+}
+
+@media screen and (max-width: 360px) {
+	.expanded-story {
+
+		.action-content {
+
+			.action-left {
+				padding-left: 5px;
+			}
+
+			.action-right {
+				padding-right: 0;
+			}
+		}
+
+	}
+
+	.fb_iframe_widget {
+		width: 276px !important;
+	}
+}
+
+

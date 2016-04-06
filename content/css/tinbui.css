@@ -1,0 +1,14 @@
+.repost-content .img-user{
+    width: 40px;
+    border-radius: 50%;
+}
+
+.repost-content .img-photo {
+    max-height: none;
+}
+
+
+#repostStoryModal .custom-dialog{
+    position: relative;
+    top: 0px;
+}

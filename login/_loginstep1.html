@@ -1,0 +1,48 @@
+<div class="login-modal login-step-1">
+	<div class="login-content">
+	
+		<div class="row mb-50">
+			<div class="col-xs-1 visible-sm-block visible-xs-block">&nbsp;</div>
+			<div class="col-xs-10 col-md-12">
+				<a class="waves-effect waves-main-color material-img btn">
+					<img class="img-responsive" ng-src="../../img/login-logo.png"/>
+				</a>
+			</div>
+			<div class="col-xs-1 visible-sm-block visible-xs-block">&nbsp;</div>
+		</div>
+
+		<div class="row mb-30">
+			<div class="col-xs-12 text-center">
+				<span>Log in or Sign up to Share Your Story</span>
+			</div>
+		</div>
+
+		<div class="row mb-15">
+			<div class="col-xs-12">
+				<a class="waves-effect waves-light btn btn-material btn-blue btn-fb full-width" ng-click="loginWithFacebook()" id="loginFb">
+					<span>Log In with Facebook</span>
+				</a>
+			</div>
+		</div>
+
+		<div class="row mb-10">
+			<div class="col-xs-12">
+				<a class="waves-effect waves-main-color btn btn-material btn-border-pink btn-regular full-width" ng-click="loginWithMedtalesAccount()">
+					<span>Log In with MedTales Account</span>
+				</a>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-xs-12">
+				<a class="waves-effect waves-main-color btn btn-material text-btn full-width btn-regular" ng-click="createAnAccount()">
+					<span>Create an Account</span>
+				</a>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<!--confirm modal-->
+<div ng-include="'../../login/_confirm_syns.html'"></div>

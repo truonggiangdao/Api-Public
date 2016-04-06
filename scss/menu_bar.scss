@@ -1,0 +1,105 @@
+$menu_bg: #92278f;
+
+
+.menu-bar-container {
+
+
+	.profile-menu {
+
+		position: absolute;
+		top: 0;
+		height: 700px;
+		max-width: 75%;
+		padding: 10px 0px 10px 15px;
+
+		background-color: $menu_bg;
+		color: white;
+
+		-webkit-transition: right .4s;
+	    -moz-transition: right .4s;
+	    transition: right .4s;
+
+		.icon-profile {
+			width: 40px;
+			height: 40px;
+			margin-left: 20px;
+		}
+
+		.profile-menu-list {
+			padding: 0;
+			margin: 0;
+			list-style: none;
+
+			li.menu-item {
+				color: rgba(255,255,255,0.8);
+				border-top: 1px solid rgba(255,255,255,.5);
+				font-family: "NunitoRegular";
+
+				&:first-child {
+					border-top: none;
+				}
+
+				.btn-menu-item {
+					display: block;
+					float: none;
+					padding: 13px 0px 10px 20px;
+					border-radius: 0;
+					line-height: 1em;
+					margin: 0;
+					width: 100%;
+					text-align: left;
+					text-transform: capitalize;
+					font-size: 1.2em;
+					color: #fff !important;
+				}
+			}
+		}
+	}
+}
+
+.cls-header {
+	.menu-bar-container {
+		.profile-menu {
+			right: -400px;
+		}
+	}
+	&.showMenuProfile {
+		.menu-bar-container {
+			.profile-menu {
+				right: 0;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 1024px){
+	.menu-bar-container {
+		.profile-menu {
+			width: 250px;
+		}
+	}
+}
+
+@media screen and (min-width: 1500px){
+	.menu-bar-container {
+		.profile-menu {
+			height: 900px;
+		}
+	}
+}
+
+@media screen and (min-width: 2500px){
+	.menu-bar-container {
+		.profile-menu {
+			height: 1900px;
+		}
+	}
+}
+
+@media screen and (max-width: 1023px){
+	.menu-bar-container {
+		.profile-menu {
+			width: 400px;
+		}
+	}
+}

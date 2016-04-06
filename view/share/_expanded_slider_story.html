@@ -1,0 +1,16 @@
+<div class="slider-content" id="sliderContent">
+    <div class="container slider">
+    	<md-button class="btn-img" ng-class="{{slide.is_video}} ? 'btn-video' : ''" aria-label="img" ng-repeat="slide in slides" 
+    	md-swipe-right="nextSlide() ; swiping=true;" md-swipe-left="prevSlide() ; swiping=true;" 
+    	ng-hide="!isCurrentSlideIndex($index)" ng-click="swiping ? ( swiping = false ) : showLightbox(slide)">
+			<img  class=" slide slide-animation nonDraggableImage" ng-src="{{slide.image_url}}">
+		</md-button>
+
+	    <md-button class="btn-nav arrow prev" aria-label="icon" ng-click="nextSlide()">
+			<img ng-src="../../img/icon_prev_slide.png" />
+		</md-button>
+		<md-button class="btn-nav arrow next" aria-label="icon" ng-click="prevSlide()">
+			<img ng-src="../../img/icon_next_slide.png"/>
+		</md-button>
+	</div>
+</div>

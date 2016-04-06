@@ -1,0 +1,98 @@
+<div class="content-section">
+	<div class="container-fluid setting-content" ng-controller="settingCtrl">
+		<div class="row">
+			<div class="col-xs-12">
+				<h2 class="header-title">Account Setting</h2>
+			</div>
+		</div>
+
+		<div class="line"></div>
+
+		<div class="row mb-20 mt-20">
+			<div class="col-md-5 col-xs-4 no-pr">
+				<label class="lbl-title">Name</label>
+			</div>
+			<div class=" col-md-5 col-xs-6">
+				<label class="lbl-value">First name Last name</label>
+			</div>
+			<div class="col-xs-2">
+				<a class="lnk-edit" >Edit</a>
+			</div>
+		</div>
+
+		<div class="row mb-20">
+			<div class="col-md-5 col-xs-4 no-pr">
+				<label class="lbl-title">Username</label>
+			</div>
+			<div class="col-md-5 col-xs-6">
+				<label class="lbl-value">Namename</label>
+			</div>
+			<div class="col-xs-2">
+				<a class="lnk-edit" >Edit</a>
+			</div>
+		</div>
+
+		<div class="row mb-20">
+			<div class="col-md-5 col-xs-4 no-pr">
+				<label class="lbl-title">Hospital Affiliation</label>
+			</div>
+			<div class="col-md-5 col-xs-6">
+				<label class="lbl-value">Hospital Name</label>
+			</div>
+			<div class="col-xs-2">
+				<a class="lnk-edit" >Edit</a>
+			</div>
+		</div>
+
+		<div class="row mb-20">
+			<div class="col-md-5 col-xs-4 no-pr">
+				<label class="lbl-title">Email</label>
+			</div>
+			<div class="col-md-5 col-xs-6">
+				<label class="lbl-value">Email@name.com</label>
+			</div>
+			<div class="col-xs-2">
+				<a class="lnk-edit">Edit</a>
+			</div>
+		</div>
+
+		<form name="formResetPass">
+			<div class="row mb-20">
+				<div class="col-md-5 col-xs-4 no-pr">
+					<label class="lbl-title">Password</label>
+				</div>
+				<div class="col-md-5 col-xs-6">
+					<label class="lbl-value" id="lblPassword">xxxxxxxxxxx</label>
+					<div class="txt-password cls-display-none m-l-15" id="txtPassword">
+						<input type="password" name="oldPass" ng-model="pass.old" class="txt-def mb-10" placeholder="Enter your old password:" required>
+						<span class="invalid-msg" ng-show="formResetPass.oldPass.$dirty && formResetPass.oldPass.$invalid">
+		    				<span ng-show="formResetPass.oldPass.$error.required">Please enter current password.</span>
+		    			</span> 
+						<input type="password" name="newPass" ng-model="pass.new" class="txt-def mb-10" placeholder="Enter your new password:" required>
+						<span class="invalid-msg" ng-show="formResetPass.newPass.$dirty && formResetPass.newPass.$invalid">
+		    				<span ng-show="formResetPass.newPass.$error.required">Please enter new password.</span>
+		    			</span> 
+						<input type="password" name="confirmPass" ng-model="pass.confirm" class="txt-def mb-10" placeholder="Confirm your new password:" required valid-password-c> 
+						<md-button class="btn-reset btn-reset-mobile" ng-click="resetPassword()">Reset Password</md-button>
+						<span class="invalid-msg" ng-show="formResetPass.confirmPass.$dirty && formResetPass.confirmPass.$invalid">
+		    				<span ng-show="formResetPass.confirmPass.$error.required">Please enter confirm password.</span>
+				            <span ng-show="!formResetPass.confirmPass.$error.required && formResetPass.confirmPass.$error.noMatch && formResetPass.newPass.$dirty">Passwords do not match.</span>
+		    			</span>
+					</div>
+					<span class="mb-10 invalid-msg msg-resetPass" ng-show="msgShowError">{{msgError}}</span>
+				</div>
+				
+				<div class="col-xs-2">
+					<a class="lnk-edit" id="lnkPassword" ng-click="showResetPassword()">Edit</a>
+					<div id="btnReset" class="button-position cls-display-none m-l-15">
+						<md-button class="btn-reset btn-reset-desktop btn-reset-desktop"  ng-click="resetPassword(pass)">Reset Password</md-button>
+					</div>
+				</div>
+			</div>
+		</form>
+		<div class="line"></div>
+	</div>
+</div>
+
+<!--error message-->
+<div ng-include="'view/share/_error_message.html'"></div>

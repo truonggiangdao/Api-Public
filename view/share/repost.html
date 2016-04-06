@@ -1,0 +1,67 @@
+<div class="custom-modal {{ repost_story_state }}" id="repostStoryModal" role="dialog" ng-controller="repostStoryCtrl">
+	<div class="custom-dialog repost-dialog">
+		<div class="repost-content">
+			<div class="row">
+				<div class="col-xs-10">
+		        	<div class="user-repost">
+						<img ng-src="../../img/icon_repost.png" class="icon-repost" /> 
+						<md-button ng-href="#/profile" class="btn-user btn-link" aria-label="img">
+							<img ng-src="{{avatar}}" class="img-user"/> 
+						</md-button>
+						<md-button ng-href="#/profile" class="username btn-link">
+							{{userName}}
+						</md-button>
+					</div>
+		        </div>
+		        <div class="col-xs-2">
+					<md-button class="btn-close-modal" aria-label="icon"  ng-click="closeRepostStoryModal()" >
+					</md-button>
+		        </div>
+		    </div>
+		    <div class="clear"></div>
+			<div class="row">
+				<div class="col-xs-12">
+					
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12">
+					<md-button class="btn-img" ng-click="showExpandedStory()" aria-label="image">
+		          		<img ng-src="{{storyImage}}" alt="" class="img-photo"/>
+		      		</md-button>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12 ">
+					<div class="user-post" >
+						<md-button ng-href="#/profile" class="btn-user btn-link" aria-label="img">
+							<img ng-src="{{postUserAvata}}" class="img-user"/> 
+						</md-button>
+						<md-button ng-href="#/profile" class="username btn-link">
+							{{postUserName}}
+						</md-button>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="des-story">
+						<p class="description">
+							{{storyDescription}}
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="line-separator"></div>
+			<div class="row">
+				<div class="col-xs-12 text-center">
+					<div class="report-button">
+						<md-button class="btn-def btn-repost" aria-label="img" ng-click="repostStory()">
+							Repost
+						</md-button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

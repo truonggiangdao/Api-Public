@@ -1,0 +1,54 @@
+@font-face {
+    font-family: 'NunitoRegular';
+    src: url('../../content/fonts/Nunito/Nunito-Regular.eot') format('opentype');
+    src: url('../../content/fonts/Nunito/Nunito-Regular.woff') format('woff'),
+         url('../../content/fonts/Nunito/Nunito-Regular.ttf') format('truetype'),
+         url('../../content/fonts/Nunito/Nunito-Regular.otf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+} 
+
+@font-face {
+    font-family: 'NunitoBold';
+    src: url('../../content/fonts/Nunito/Nunito-Bold.eot') format('opentype');
+    src: url('../../content/fonts/Nunito/Nunito-Bold.woff') format('woff'),
+         url('../../content/fonts/Nunito/Nunito-Bold.ttf') format('truetype'),
+         url('../../content/fonts/Nunito/Nunito-Bold.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+} 
+
+@font-face {
+    font-family: 'NunitoLight';
+    src: url('../../content/fonts/Nunito/Nunito-Light.eot') format('opentype');
+    src: url('../../content/fonts/Nunito/Nunito-Light.woff') format('woff'),
+         url('../../content/fonts/Nunito/Nunito-Light.ttf') format('truetype'),
+         url('../../content/fonts/Nunito/Nunito-Light.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+} 
+
+@font-face {
+    font-family: 'NunitoSemiBold';
+    src: url('../../content/fonts/Nunito/Nunito-SemiBold.eot') format('opentype');
+    src: url('../../content/fonts/Nunito/Nunito-SemiBold.woff') format('woff'),
+         url('../../content/fonts/Nunito/Nunito-SemiBold.ttf') format('truetype'),
+         url('../../content/fonts/Nunito/Nunito-SemiBold.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+semi {
+    display: inline;
+    font-family: "NunitoSemiBold";
+}
+
+strong {
+    font-family: "NunitoBold";
+}
+
+light {
+    display: inline;
+    font-family: "NunitoLight";
+}

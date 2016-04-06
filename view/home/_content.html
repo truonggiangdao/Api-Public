@@ -1,0 +1,130 @@
+<!--slider latest item-->
+<div class="container-fluid" ng-show="showFeatureStory">
+	<div class="row  home-slide" >
+		<div class="col-xs-12 cls-slide">
+			 <div class="swiper-container">
+		        <div class="swiper-wrapper">
+		        	<div class="swiper-slide" id="{{feature.id}}" style="margin-right: 15px;" ng-repeat="feature in feature_stories">
+		            	<div class="item" > 
+        	             	<md-button class="btn-slide ripple-purple fix-image" ng-click="changeFeatureStory(feature.id)" ng-mouseover="changeFeatureStory(feature.id)" aria-label="img" ng-class="{{feature.story_type === 'video'}} ? 'btn-video btn-img' : ''">
+								<img ng-src="{{feature.story_type === 'video' ? feature.avatar_story : feature.images[0].image_url }}" />
+							</md-button>
+							<md-button class="btn-slide ripple-purple" ng-click="changeFeatureStory(feature.id)" ng-mouseover="changeFeatureStory(feature.id)" aria-label="img">
+								<h5>{{feature.story_title}}</h5>
+							</md-button>
+						</div>
+					</div>
+		        </div>
+		    </div>
+		</div>
+	</div>
+	<!-- Home feature -->
+	<div class="row home-feature" ng-class="(homeFeature_is_healthcare_professional === 'false' || homeFeature_is_anonymously === 'true') ? 'patient_anonymous' : 'healthcare_professional'">
+		<div class="col-md-5 col-sm-5 col-xs-12 no-pr no-pl feature-img" >
+			<md-button  class="btn-img {{homeFeature_story_type === 'video' ? 'btn-video' : ''}}" ng-click="showExpandedStory(homeFeature_id)" aria-label="image">
+				<img id="feature_img" ng-src="{{homeFeature_img}}" />
+			</md-button>
+		</div>
+		<div class="col-md-7 col-sm-7 col-xs-12 feature-details">
+			<div class="cls-hipaa-mobile">
+				<div class="feature-icon">
+					<md-button ng-click="viewProfile(homeFeature_user_id)" class="btn-user btn-link" aria-label="img">
+						<img ng-src="{{homeFeature_profile_image}}" class="icon-hipaa"/>
+					</md-button>
+					<md-button ng-click="viewProfile(homeFeature_user_id)" class="txt-anno btn-link">
+						{{homeFeature_name}}
+					</md-button>
+				</div>
+			</div>
+			<md-button class="btn-title" ng-click="showExpandedStory(homeFeature_id)">
+				<h1 class="title" id="titleStory">{{homeFeature_title}}</h1>
+			</md-button>
+			<p class="description" id="descriptionStory">{{homeFeature_des}}</p>
+			<md-button class="read-more" ng-click="showExpandedStory(homeFeature_id)">
+				Read more
+			</md-button>
+			<div class="clear"></div>
+		</div>
+		<!--Action desktop-->
+		<div class="col-md-7 col-sm-7 col-xs-12 action action-desktop">
+			<div class="line-separator"></div>
+			<div class="col-md-7 col-sm-5 col-xs-6 no-pr no-pl action-left">
+				<div class="feature-icon">
+					<md-button ng-click="viewProfile(homeFeature_user_id)" class="btn-user btn-link" aria-label="img">
+						<img ng-src="{{homeFeature_profile_image}}" class="icon-hipaa"/>
+					</md-button>
+					<md-button ng-click="viewProfile(homeFeature_user_id)" class="txt-anno btn-link">
+						{{homeFeature_name}}
+					</md-button>
+				</div>
+				<div class="cls-follow">
+					<md-button aria-label="btn" class="btn-def follow-{{homeFeature_user_id}} {{btnFollowClass}}" ng-click="changeStatus($event, homeFeature_user_id)">
+					</md-button>
+				</div>
+			</div>
+			
+			<div class="col-md-5 col-sm-7 col-xs-6 no-pr no-pl action-right">
+				<div class="action-item">
+	     			<label class="like-{{homeFeature_id}}">
+		     			<md-button class="btn-icon md-icon-button" aria-label="icon" ng-click="changeNumberLike(homeFeature_id)">
+			     			<img ng-src="{{homeFeature_is_liked === 'false' ? '../../img/icon_dislike.png' : '../../img/icon_like.png'}}" class="icon-action "/>
+			     		</md-button>
+			     		<span class="txt-number">{{homeFeature_total_like}}</span>
+		     		</label>
+		     	</div>
+				<div class="action-item">
+					<label>
+						<md-button class="btn-icon md-icon-button" aria-label="icon" ng-click="showExpandedStory()">
+							<img ng-src="{{homeFeature_is_commented === 0 ? '../../img/icon_no_comment.png' : '../../img/icon_comment.png'}}" class="icon-action"/>
+						</md-button>
+						<span class="txt-number">{{homeFeature_total_comment}}</span>
+					</label>
+				</div>
+				<div class="action-item last-item">
+					<label>
+                        <md-button class="btn-icon md-icon-button" aria-label="icon" ng-click="showRepostStory(homeFeature_id)">
+							<img ng-src="{{homeFeature_reposted_by_me === 'false' ? '../../img/icon_disrepost.png' : '../../img/icon_repost.png'}}" class="icon-action"/>
+						</md-button>
+						<span class="txt-number">{{homeFeature_total_repost}}</span>
+					</label>
+				</div>
+			</div>
+		</div>
+		<!--Action mobile-->
+		<div class="col-md-7 col-sm-7 col-xs-12 no-pr no-pl action action-mobile">
+			<div class="col-md-8 col-sm-8 col-xs-8 no-pr no-pl action-left-mobile">
+	     		<div class="action-item">
+	     			<label class="like-{{homeFeature_id}}">
+		     			<md-button class="btn-icon md-icon-button" aria-label="icon" ng-click="changeNumberLike(homeFeature_id)">
+			     			<img ng-src="{{homeFeature_is_liked === 'false' ? '../../img/icon_dislike.png' : '../../img/icon_like.png'}}" class="icon-action "/>
+			     		</md-button>
+			     		<span class="txt-number">{{homeFeature_total_like}}</span>
+		     		</label>
+		     	</div>
+				<div class="action-item">
+					<label>
+						<md-button class="btn-icon md-icon-button" aria-label="icon" ng-click="showExpandedStory()">
+							<img ng-src="{{homeFeature_is_commented === 0 ? '../../img/icon_no_comment.png' : '../../img/icon_comment.png'}}" class="icon-action"/>
+						</md-button>
+						<span class="txt-number">{{homeFeature_total_comment}}</span>
+					</label>
+				</div>
+				<div class="action-item">
+					<label>
+                        <md-button class="btn-icon md-icon-button" aria-label="icon" ng-click="showRepostStory(homeFeature_id)">
+							<img ng-src="{{homeFeature_reposted_by_me === 'false' ? '../../img/icon_disrepost.png' : '../../img/icon_repost.png'}}" class="icon-action"/>
+						</md-button>
+						<span class="txt-number">{{homeFeature_total_repost}}</span>
+					</label>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-4 col-xs-4 no-pl no-pr action-right-mobile">
+				<md-button aria-label="btn" class="btn-def follow-{{homeFeature_user_id}} {{btnFollowClass}}" ng-click="changeStatus($event, homeFeature_user_id)">
+				</md-button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Grid page -->
+ <div ng-include="'view/share/_grid_main.html'"></div>

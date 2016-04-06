@@ -1,0 +1,558 @@
+.btn-material {
+	text-transform: none;
+	font-family: "NunitoBold";
+	height: 40px;
+	padding: 0;
+
+	&.btn-blue {
+		background-color: #3b579d !important;
+
+		&:hover {
+			color: #fff !important;
+		}
+	}
+
+	&.btn-fb {
+		&:before {
+			display: block;
+			float: left;
+			position: absolute;
+			top: 3px;
+			left: 3px;
+			width: 35px;
+			height: 34px;
+			background-image: url("../../img/icon_fb.png");
+			background-size: 100% 100%;
+			content: "";
+		}
+	}
+
+	&.btn-border-pink {
+		background-color: transparent;
+		color: #92278f !important;
+		border: 1px solid #92278f;
+	}
+
+	&.btn-pink {
+		background-color: #92278f !important;
+		color: #fff !important;
+	}
+
+	&.text-btn {
+		color: #92278f !important;
+		background-color: transparent;
+		box-shadow: none !important;
+	}
+
+	&.btn-regular {
+		font-family: "NunitoRegular";
+		font-weight: 400;
+	}
+}
+
+.btn-select-file {
+	text-transform: none;
+	font-family: "NunitoBold";
+	color: rgba(0,0,0,.6) !important;
+	font-size: 14px;
+	background-color: transparent;
+    box-shadow: none;
+    border: 1px solid #92278f;
+    height: 170px !important;
+    line-height: 150px !important;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+    padding: 0;
+
+    &:hover {
+    	background-color: transparent;
+    }
+}
+
+/*Button layout*/
+.btn-nav{
+     min-width: 0 !important;
+     padding: 0 5px 0 5px;
+     margin: 0px;
+}
+
+.btn-slide{
+     min-width: 0 !important;
+     padding: 0;
+     margin: 0px;
+     white-space: normal !important;
+     text-transform: none !important;
+     text-align: left;
+     font-size: 1em;
+     border-radius: 0;
+     width: 100%;
+}
+
+.btn-icon {
+    min-height: 0 !important;
+    margin: 0px !important;
+    padding: 0px !important;
+    vertical-align: middle;
+    height: 29px !important;
+    width: 29px !important;
+
+    &.btn-delete-story {
+        font-size: 19px;
+    }
+}
+
+.btn-icon-repost {
+    width: 22px !important;
+}
+
+.btn-def {
+    color: #fff;
+    text-transform: none !important;
+    border: 1px solid  #92278f;
+    background-color: transparent;
+    min-height: 25px;
+    min-width: 72px;
+    margin: 0; 
+    font: 9px "NunitoBold";
+}
+
+.btn-follow {
+    color: #fff !important;
+    background-color: #92278f !important;
+
+    &:after {
+        content: "Follow";
+    }
+}
+
+.btn-following {
+    color: #92278f !important;
+
+    &:before {
+        background: url(../../img/icon_following_big.png) no-repeat 0 0;
+        background-size: 13px auto;
+        display: block;
+        float: left;
+        width: 14px;
+        height: 11px;
+        content: "";
+    }
+
+    &:after {
+        content: "Following";
+    }
+}
+
+.gray {
+    color: #777;
+}
+
+.btn-submit-def {
+    color: #fff;
+    text-transform: none !important;
+    background-color: transparent;
+    margin: 0; 
+    font: 14px "NunitoRegular";
+    width: 175px;
+    height: 36px;
+    border-radius: 0;
+}
+
+.btn-submit-story {
+    background-color: #92278f !important;
+}
+
+.btn-submit-anonymously {
+    background-color: #410843 !important;
+}
+
+.btn-link, .btn-profile {
+    min-height: 13px !important;
+    vertical-align: middle;
+    text-transform: none;
+    margin: 0;   
+    white-space: normal;
+}
+
+.btn-link {
+    text-align: left; 
+}
+
+.md-button {
+    vertical-align: middle;
+    
+    &.btn-profile {
+        color: #b5b5b6;
+        font: 1.2em 'NunitoLight';
+    }
+
+    &.btn-title {
+        font-size: 1em;
+        text-transform: none !important;
+        white-space: normal !important;
+        margin: 0;
+        padding: 0;
+        text-align: left;
+    }
+
+    &.btn-img {
+        border-radius: 0;
+        margin: 0;
+        padding: 0;
+        min-width: 100%;
+        min-height: auto;
+        height: auto;
+        overflow: visible;
+
+        &.btn-video {
+            &:before, &::before {
+                display: block;
+                position: absolute;
+                width: 20%;
+                height: auto;
+                content: "";
+                padding-bottom: 20%;
+                background-image: url(../../img/video_btn.png);
+                background-position: 50% 50%;
+                background-size: 100% 100%;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+            }
+        }
+    }
+
+    &.btn-story-single, &.btn-story-gallery {
+        margin: 0;
+        padding: 0;
+        min-height: 35px;
+        min-width: 35px;
+        margin-right: 10px;
+    }
+
+    &.btn-story-single {
+        background: url(../../img/icon_singleview.png) no-repeat 2px 2px;
+        background-size: 30px auto;
+
+         &.active {
+            background: url(../../img/icon_active_singleview.png) no-repeat 2px 2px;
+            background-size: 30px auto;
+        }
+    }
+
+    &.btn-story-gallery {
+        background: url(../../img/icon_galleryview.png) no-repeat 2px 2px;
+        background-size: 30px auto;
+
+        &.active {
+            background: url(../../img/icon_active_galleryview.png) no-repeat 2px 2px;
+            background-size: 30px auto;
+        }
+    }
+
+    &.btn-close-modal {
+        background: url(../../img/icon_close_modal.png) no-repeat 3px 2px;
+        background-size: 16px auto;
+        margin: 5px 15px 5px 15px;
+        padding: 0;
+        min-height: 27px;
+        min-width: 22px;
+        float: right;
+    }
+
+    &.btn-user {
+        min-width: 33px;
+        padding: 0;
+        border-radius: 0;
+    }
+
+    &.btn-repost {
+        color: #fff !important;
+        background-color: #92278f !important;
+        height: 35px !important;
+        width: 110px;
+        font-size: 14px;
+    }
+
+    &.btn-reset {
+        color: #fff !important;
+        background-color: #92278f !important;
+        text-transform: none !important;
+        margin: 0;
+        font: 14px "NunitoBold";
+        padding: 0 15px;
+    }
+
+}
+
+.btn-submit-report {
+    background-color: #92278f !important;
+}
+
+@media screen and (max-width: 1023px) {
+    .btn-def{
+        height: 50px !important;
+        width: 180px;
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .btn-following{
+        &:before {
+            background: url(../../img/icon_following_big.png) no-repeat 2px 1px;
+            background-size: 35px auto;
+            width: 37px;
+            height: 30px;
+        }
+
+        &:after {
+            margin-left: -13px;
+        }
+    }
+
+    .btn-icon{
+        height: 63px !important;
+        width: 74px !important;
+
+        &.btn-delete-story {
+            font-size: 42px;
+        }
+
+        &.btn-icon-report {
+            height: 70px !important;
+            width: 67px !important;
+        }
+    }
+
+    .btn-submit-def{
+        width: 266px;
+        height: 50px;
+        font-size: 20px;
+    }
+
+    .btn-link {
+        min-height: 33px !important;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .btn-def{
+        
+        &.btn-follow-story, &.btn-following-story {
+            height: 47px !important;
+            width: 133px;
+            font-size: 21px;
+        }
+    }
+
+    .btn-following {
+        &.btn-follow-story:before {
+            background: url(../../img/icon_following_big.png) no-repeat 0px 5px;
+            background-size: 25px auto;
+            margin-left: -2px;
+        }
+    }
+
+    .btn-icon{
+        &.btn-icon-story{
+            height: 59px !important;
+            width: 48px !important;
+        }
+
+        &.btn-delete-story {
+            font-size: 35px;
+        }
+    }
+}
+
+@media (max-width: 720px) {
+    .btn-icon{
+        height: 63px !important;
+        width: 65px !important;
+    }
+
+    .btn-def{
+        
+        &.btn-follow-story, &.btn-following-story {
+            height: 38px !important;
+            width: 108px;
+            font-size: 17px;
+        }
+    }
+
+    .btn-following {
+        &.btn-follow-story:before {
+            background: url(../../img/icon_following_big.png) no-repeat 0px 7px;
+            background-size: 21px auto;
+            margin-left: -4px;
+        }
+
+         &.btn-follow-story:after {
+            margin-left: -16px;
+         }
+    }
+
+    .btn-icon{
+        &.btn-icon-story{
+            height: 48px !important;
+            width: 46px !important;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .btn-def{
+        height: 45px !important;
+        width: 130px;
+        font-size: 20px;
+    }
+
+    .btn-following{
+        &:before {
+            background: url(../../img/icon_following_big.png) no-repeat 0px 5px;
+            background-size: 25px auto;
+            margin-left: -2px;
+        }
+    }
+
+    .btn-icon{
+        height: 44px !important;
+        width: 48px !important;
+    }
+
+    .btn-icon{
+        &.btn-icon-story{
+            height: 40px !important;
+            width: 33px !important;
+        }
+
+        &.btn-delete-story {
+            font-size: 25px;
+        }
+    }
+
+     .btn-def{
+        
+        &.btn-follow-story, &.btn-following-story {
+            min-height: 25px !important;
+            min-width: 66px !important;
+            height: 28px !important;
+            width: 64px !important;
+            font-size: 9px;
+            line-height: 23px;
+        }
+    }
+
+    .btn-following {
+        &.btn-follow-story:before {
+            background: url(../../img/icon_following_big.png) no-repeat 0px 6px;
+            background-size: 13px auto;
+            width: 14px;
+            height: 16px;
+        }
+
+         &.btn-follow-story:after {
+            margin-left: 0px;
+         }
+    }
+   
+    .btn-submit-def {
+        width: 190px;
+        height: 38px;
+        font-size: 12px;
+    }
+
+    .md-button {
+
+        &.btn-profile {
+            font-size: 1em;
+        }
+    }
+
+    .btn-link {
+        &.username {
+            min-width: 39px;
+        }
+    }
+}
+
+.min-height-50 {
+    min-height: 50px;
+}
+
+@media (max-width: 480px) {
+    .btn-def{
+        height: 37px !important;
+        min-width: 45px;
+        width: 90px;
+        font-size: 12px;
+    }
+
+    .btn-following{
+        &:before {
+            background: url(../../img/icon_following_big.png) no-repeat 0px 8px;
+            background-size: 19px auto;
+            margin-left: -1px;
+            width: 34px;
+        }
+    }
+
+    .btn-icon{
+       height: 36px !important;
+       width: 38px !important;
+    }
+
+    .btn-icon {
+        &.btn-icon-story{
+            height: 37px !important;
+            width: 27px !important;
+        }
+    }
+
+    .btn-submit-def {
+        width: 164px;
+    }
+
+    .btn-link {
+        min-height: 24px !important;
+    }
+}
+
+@media (max-width: 360px) {
+    .btn-def{
+       font-size: 12px;
+    }
+
+    .btn-nav{
+        padding: 0 2px 0 2px;
+    }
+
+    .btn-icon{
+       height: 27px !important;
+       width: 27px !important;
+    }
+
+    .btn-submit-def {
+        width: 141px;
+    }
+
+    .md-button {
+        &.btn-profile {
+            min-width: 72px;
+        }
+    }
+
+
+    .btn-icon{
+        &.btn-icon-story{
+            height: 33px !important;
+            width: 26px !important;
+        }
+
+        &.btn-delete-story {
+            font-size: 18px;
+        }
+    }
+}

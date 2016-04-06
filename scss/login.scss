@@ -1,0 +1,254 @@
+$color-label: #92278f;
+
+.login-page {
+
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+
+	z-index: 999;
+
+	background-image: url("../../img/login-bg-mobile.jpg");
+	background-position: 50% 50%;
+	background-size: cover;
+    background-repeat: no-repeat;
+	text-align: center;
+	padding-top: 15vh;
+	font-size: 14px;
+
+	.login-modal {
+
+		width: 900px;
+		max-width: 90%;
+		display: inline-block;
+		text-align: center;
+		background-color: white;
+		border-radius: 3px;
+		color: $color-label;
+		font-family: "NunitoRegular";
+		padding: 20px;
+
+		-webkit-transition: all .5s;
+	    -moz-transition: all .5s;
+	    transition: all .5s;
+
+		position: relative;
+
+		.close-modal {
+			position: absolute;
+			width: 18px;
+			height: 25px;
+			top: 20px;
+			right: 30px;
+			opacity: 0.8;
+		}
+
+		.login-content {
+			width: 315px;
+			max-width: 100%;
+			display: inline-block;
+			vertical-align: middle;
+			line-height: normal;
+
+			&.big {
+				width: 400px;
+				max-width: 100%;
+			}
+			
+			.input-field {
+				margin-top: 0;
+
+				input[type="text"], input[type="email"], input[type="password"],  {
+					border: 1px solid $color-label;
+					height: 2.5rem;
+					padding-bottom: 5px;
+					line-height: 20px;
+					margin-bottom: 0;
+					padding-left: 10px;
+					padding-right: 10px;
+					box-sizing: border-box;
+
+					&:focus:not([readonly]) {
+						box-shadow: 0 1px 0 0 $color-label;
+					}
+
+					&.valid {
+						box-shadow: 0 1px 0 0 $color-label;
+					}
+
+					&.input-border-gray {
+					    border-color: #b5b5b6;
+
+					    &:focus:not([readonly]) {
+							box-shadow: 0 1px 0 0 #b5b5b6;
+						}
+
+						&.valid {
+							box-shadow: 0 1px 0 0 #b5b5b6;
+						}
+					}
+				}
+
+				label {
+					top: 0.6rem;
+					&.active {
+						color: $color-label;
+						-webkit-transform: translate(5px,-150%);
+    					transform: translate(5px,-150%);
+    					opacity: 0;
+					}
+				}
+			}
+
+			.icon-social {
+				display: inline-block;
+				width: auto;
+				height: 30px;
+				padding: 10px 10px 0;
+			}
+		}
+
+		&.login-step-1, &.login-step-2, &.login-step-3, &.login-step-4,
+		&.login-step-5, &.login-step-6, &.login-step-7, &.login-step-8 {
+			display: none;
+			animation: fadeInUp .8s; 
+			-webkit-animation: fadeInUp .8s;
+		}
+	}
+
+	&.main {
+		.login-modal {
+			&.login-step-1 {
+				display: inline-block;
+			}
+		}
+	}
+
+	&.createAccount {
+		.login-modal {
+			&.login-step-2 {
+				display: inline-block;
+			}
+		}
+	}
+
+	&.confirmedName {
+		.login-modal {
+			&.login-step-3 {
+				display: inline-block;
+			}
+		}
+	}
+
+	&.showLoginForm {
+		.login-modal {
+			&.login-step-4 {
+				display: inline-block;
+			}
+		}
+	}
+
+	&.uploadedProfilePicture {
+		.login-modal {
+			&.login-step-5 {
+				display: inline-block;
+			}
+		}
+	}
+
+	&.updatedEmailPassword {
+		.login-modal {
+			&.login-step-6 {
+				display: inline-block;
+			}
+		}
+	}
+
+	&.showLoggedInProfile {
+		.login-modal {
+			&.login-step-8 {
+				display: inline-block;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.login-page {
+		padding-top: 10px;
+		padding-top: 5vh;
+
+		.login-modal {
+			max-width: 94%;
+			min-height: 400px;
+			line-height: 400px;
+
+			.close-modal {
+				top: 10px;
+				right: 10px;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.login-page {
+		background-image: url("../../img/login-bg-tablet.jpg");
+
+		.login-modal {
+			min-height: 450px;
+			line-height: 450px;
+		}
+	}
+}
+
+@media screen and (min-width: 900px) {
+	.login-page {
+		.login-modal {
+		}
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.login-page {
+		background-image: url("../../img/login-bg-desktop.jpg");
+		.login-modal {
+		}
+	}
+}
+
+@media screen and (min-width: 1400px) {
+	.login-page {
+
+		padding-top: 20vh;
+
+		.login-modal {
+			min-height: 500px;
+			line-height: 500px;
+		}
+	}
+}
+
+@media screen and (min-width: 2000px) {
+	.login-page {
+
+		padding-top: 25vh;
+
+		.login-modal {
+		}
+	}
+}
+
+@media screen and (min-width: 2500px) {
+	.login-page {
+
+		padding-top: 30vh;
+
+		.login-modal {
+			min-height: 550px;
+			line-height: 550px;
+		}
+	}
+}

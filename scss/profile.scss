@@ -1,0 +1,344 @@
+.header-profile {
+	position: fixed;
+    top: 61px;
+    width: 100%;
+    z-index: 10;
+    left: 0;
+    right: 0;
+
+    .user-profile-desktop {
+    	position:absolute;    
+	    left: 25px;
+	    top: 15px;
+
+		.img-user-profile {
+			height: 160px;
+		}
+	}
+}
+
+.content-profile {
+	margin-top: 240px;
+}
+
+.profile-user {
+	background-color:#fff;
+    overflow: hidden;
+    -webkit-box-shadow: inset 0 10px 10px -10px rgba(0,0,0,0.8);
+    -moz-box-shadow: inset 0 10px 10px -10px rgba(0,0,0,0.8);
+    box-shadow: inset 0 10px 10px -10px rgba(0,0,0,0.8);
+    padding: 35px 0 35px 0;
+    margin-bottom: 25px;
+    position: relative;
+
+	.user-info{
+		padding-left: 220px;
+
+		.txt-username, .txt-info {
+			color: #000;
+			font-size: 1.2em;
+		}
+
+		.txt-username {
+			font-family: 'NunitoBold';
+			padding: 0;
+		}
+
+		.txt-info {
+			font-family: 'NunitoLight';
+		}
+	}
+
+	.data-info {
+
+		.item-data {
+			text-align: center;
+			padding-right: 30px;
+			
+			.txt-number {
+				color: #b5b5b6;
+				font-size: 1.2em;
+			}
+
+			.txt-number {
+				font-family: 'NunitoBold';
+			}
+
+			&.item-btn-follow {
+				padding-top: 5px;
+			}
+		}
+
+		.item-data {
+			
+			&.active {
+				.txt-number, .btn-profile{
+					color: #92278f;
+				}
+			}
+		}
+	}
+
+	.data-info-desktop {
+		display: -webkit-box;
+	    display: -ms-flexbox;
+	    display: -webkit-flex;
+	    display: flex;
+	    flex-direction: row;
+	    justify-content: flex-end;
+	    padding-top: 20px;
+    }
+
+	.info-user-mobile, .data-info-mobile {
+		display: none;
+	}
+}
+
+.user-followers {
+	background-color: white;
+	padding: 0 25px;
+	margin-top: 15px;
+
+	.user-details {
+		padding: 15px 0;
+
+		.detail-info {
+			display: inline-block;
+			vertical-align: middle;
+			color: #777777;
+			font: 1.2em 'NunitoLight';
+		}
+
+		.img-user-follower {
+			height: 80px;
+		}
+	}
+
+	.user-details-mobile {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 1023px) {
+	.header-profile {
+		
+	    .user-profile-desktop {
+			display: none;
+		}
+	}
+
+	.content-profile {
+		margin-top: 460px;
+	}
+
+	.profile-user {
+		padding: 20px 0;
+
+		.info-user-mobile, .data-info-mobile {
+			display: block;
+		}
+
+		.info-user-desktop, .data-info-desktop {
+			display: none;
+		}
+
+		.user-info{
+		    padding: 0 15px 25px;
+			width: 100%;
+
+			.logo-user {
+				width: 227px;
+				float: left;
+
+				.img-user-profile{
+					width: 100%;
+				}
+			}
+
+			.details-user {
+				float: left;
+
+				.user {
+					padding: 20px 0 0 20px;
+				}
+
+				.following {
+					padding-left: 20px;
+					position: absolute;
+					top: 164px;
+				}
+			}
+
+			.txt-info, .txt-username {
+				line-height: 34px;
+			}
+
+		}
+
+		.data-info {
+			width: 100%;
+
+			.item-btn-following {
+				display: none;
+			}
+		}
+	}
+
+	.user-followers {
+		margin-top: 0;
+
+		.user-details {
+
+			.img-user-follower {
+			    height: 170px;
+			}
+		}
+
+		.user-details-mobile {
+			display: block;
+		}
+
+		.user-details-desktop {
+			display: none;
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.profile-user {
+		padding: 15px 0 5px;
+
+		.user-info {
+			padding-bottom: 15px;
+		}
+	}
+
+	.content-profile {
+		margin-top: 420px;
+	}
+}
+
+@media screen and (max-width: 720px) {
+	.content-profile {
+		margin-top: 405px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.content-profile {
+		margin-top: 300px;
+	}
+
+	.profile-user {
+		
+		.user-info {
+			padding-left: 10px;
+			padding-bottom: 8px;
+
+			.logo-user {
+				width: 120px;
+			}
+
+			.txt-username, .txt-info {
+				line-height: 17px;
+				font-size: 0.9em;
+			}
+
+			.details-user {
+			
+				.user {
+					padding: 10px 0 0 10px;
+				}
+
+				.following {
+					padding-left: 10px;
+					top: 76px;
+				}
+			}
+		}
+
+		
+
+		.data-info {
+			.item-data {
+				.txt-number {
+					font-size: 0.8em;
+				}
+			}
+		}
+	}
+
+	.user-followers {
+		.user-details {
+			.img-user-follower {
+			    height: 140px;
+			}
+
+			.detail-info {
+				font-size: 0.9em;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.content-profile {
+		margin-top: 275px;
+	}
+
+	.profile-user {
+		
+		.user-info {
+			padding-left: 10px;
+
+			.logo-user {
+				width: 120px;
+			}
+
+			.details-user {
+				.user {
+					padding-top: 5px;
+				}
+			}
+		}
+	}
+
+	.user-followers {
+		.user-details {
+			.img-user-follower {
+			    height: 110px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 360px) {
+	.content-profile {
+		margin-top: 250px;
+	}
+
+	.profile-user {
+		
+		.user-info {
+			.logo-user {
+				width: 113px;
+			}
+
+			.details-user {
+
+				.user {
+					padding: 1px 0 0 10px;
+				}
+				
+				.following {
+					top: 69px;
+				}
+			}
+		}
+
+		.data-info {
+			padding: 0;
+		}
+	}
+}
+

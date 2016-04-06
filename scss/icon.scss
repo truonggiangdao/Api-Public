@@ -1,0 +1,79 @@
+/*Css icon*/
+.icon-action, .icon-reposted, .icon-report {
+	height: 18px;
+	width: auto;
+    display: inline !important;
+
+}
+
+.icon-action {
+	&.icon-delete {
+		height: 14px;
+	}
+}
+
+/* Mobile mode*/
+@media screen and (max-width: 1023px) {
+	.icon-action, .icon-reposted {
+		height: 45px;
+	}
+
+	.icon-delete {
+		height: 25px;
+	}
+
+	.icon-report { 
+		height: 40px;
+	}
+
+}
+
+@media screen and (max-width: 900px) {
+	.icon-action {
+		&.icon-action-story {
+			height: 34px;
+		}
+	}
+}
+
+@media screen and (max-width: 720px) {
+    .icon-action, .icon-reposted {
+    	height: 40px;
+	}
+
+	.icon-action {
+		&.icon-action-story {
+			height: 30px;
+		}
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.icon-action, .icon-reposted {
+    	height: 30px;
+	}
+
+	.icon-action {
+		&.icon-action-story {
+			height: 23px;
+		}
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.icon-action, .icon-reposted {
+	    height: 24px;
+	}
+
+	.icon-action {
+		&.icon-action-story {
+			height: 18px;
+		}
+	}
+}
+
+@media screen and (max-width: 360px) {
+	.icon-action, .icon-reposted {
+		height: 18px;
+	}
+}

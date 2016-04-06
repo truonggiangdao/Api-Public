@@ -1,0 +1,56 @@
+<div id="notifications" class="notifications" ng-controller="NotificationCtrl" ng-click=" $event.stopPropagation();">
+	<div class="notification-list" ng-scrollbars ng-scrollbars-config="scroll.scrollbarConfig" ng-scrollbars-update="updateScrollbar">
+		<!-- notification-item -->
+		<div class="notification-item" ng-repeat="notif in notifications">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="noti-img">
+						<md-button class="btn-nav" aria-label="icon">
+							<div class="notification-img" style="background-image: url('{{ notif.image.image_url }}');">&nbsp;</div>
+						</md-button>
+					</div>
+					<div class="noti-text" ng-show="{{ notif.type == 'REPORTED' }}">
+						<strong>"{{ notif.message.story }}"</strong> was published anonymously <light class="gray">{{ notif.human_time }}</light>
+					</div>
+
+					<div class="noti-text" ng-show="{{ notif.type == 'FEATURED' }}">
+						<strong>"{{ notif.message.story }}"</strong> was featured <light class="gray">{{ notif.human_time }}</light>
+					</div>
+
+					<div class="noti-text" ng-show="{{ notif.type == 'POSTED' }}">
+						<strong>"{{ notif.message.story }}"</strong> was published <light class="gray">{{ notif.human_time }}</light>
+					</div>
+
+					<div class="noti-text" ng-show="{{ notif.type == 'POSTED_ANONYM' }}">
+						<strong>"{{ notif.message.story }}"</strong> was published anonymously <light class="gray">{{ notif.human_time }}</light>
+					</div>
+
+					<div class="noti-text" ng-show="{{ notif.type == 'REPOSTED' }}">
+						<strong>{{ notif.message.user }}</strong> reposted <strong>"{{ notif.message.story }}"</strong> <light class="gray">{{ notif.human_time }}</light>
+					</div>
+
+					<div class="noti-text" ng-show="{{ notif.type == 'COMMENTED' }}">
+						<strong>{{ notif.message.user }}</strong> commented on <strong>"{{ notif.message.story }}"</strong> <light class="gray">{{ notif.human_time }}</light>
+					</div>
+
+					<div class="noti-text" ng-show="{{ notif.type == 'POSTED_NON_ANONYM' }}">
+						<strong>{{ notif.message.user }}</strong> posted a story: <strong>"{{ notif.message.story }}"</strong> <light class="gray">{{ notif.human_time }}</light>
+					</div>
+
+					<div class="noti-text" ng-show="{{ notif.type == 'FOLLOWED' }}">
+						<strong>{{ notif.message.user }}</strong> followed you <light class="gray">{{ notif.human_time }}</light>
+					</div>
+
+					<div class="noti-text" ng-show="{{ notif.type == 'LIKED' }}">
+						<strong>{{ notif.message.liked_count }} users</strong> have chimed on <strong>"{{ notif.message.story }}"</strong> <light class="gray">{{ notif.human_time }}</light>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="load-more"></div>
+
+		<div class="no-notification text-center {{ showNoNotification }}">No notifications</div>
+		
+	</div>
+</div>

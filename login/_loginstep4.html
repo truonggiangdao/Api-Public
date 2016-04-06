@@ -1,0 +1,52 @@
+<div class="login-modal login-step-4">
+	<div class="login-content">
+
+		<div class="row mb-30">
+			<div class="col-xs-12 text-center">
+				<h4>Log in with MedTales Account</h4>
+			</div>
+		</div>
+		<form name="loginForm">
+			<div class="row mb-15">
+				<div class="col-xs-12">
+					<div class="input-field">
+	        			<label for="email" class="left-110">Email</label>
+	        			<input id="email" name="email" type="text" class="validate input-border-gray" ng-model="data.email" required>
+	        		</div>
+				</div>
+				<!-- <span class="invalid-msg" ng-show="loginForm.email.$dirty && loginForm.email.$invalid">
+    				<span ng-show="loginForm.email.$error.required">Email is required.</span>
+    				<span ng-show="loginForm.email.$error.email">Email Address is incorrect format.</span>
+    			</span> -->
+			</div>
+
+			<div class="row mb-15">
+				<div class="col-xs-12">
+					<div class="input-field">
+						<label for="password" class="left-100">Password</label>
+	        			<input id="password" name="pass" type="password" class="validate input-border-gray" ng-model="data.password" required>
+	        		</div>
+				</div>
+				<!-- <span class="invalid-msg" ng-show="loginForm.pass.$dirty && loginForm.pass.$invalid">
+    				<span ng-show="loginForm.pass.$error.required">Password is required.</span>
+    			</span> -->
+			</div>
+			<span ng-show="msgError" class="msgErrLoginRegis">Username/Email does not exist or incorrect password.</span>
+			<div class="row mb-10">
+				<div class="col-xs-12">
+					<a class="waves-effect waves-light btn btn-material btn-pink full-width" ng-click="login(data)">
+						<span>Log in</span>
+					</a>
+				</div>
+			</div>
+		</form>
+		<div class="row">
+			<div class="col-xs-12">
+				<a class="waves-effect waves-main-color btn btn-material text-btn full-width" ng-click="goBackToMain()">
+					<span>&lt; Back</span>
+				</a>
+			</div>
+		</div>
+
+	</div>
+</div>

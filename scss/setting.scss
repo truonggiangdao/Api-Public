@@ -1,0 +1,74 @@
+.setting-content {
+	padding: 45px 70px;
+	max-width: 1042px;
+
+	.line {
+		border-bottom: 1px solid #92278f;
+	}
+
+	.header-title {
+		margin-bottom: 25px;
+		color: #000;
+		font-family: "NunitoBold";
+	}
+
+	.lbl-title {
+		font: 1.2em "NunitoBold";
+		color: #000;
+	}
+
+	.lbl-value, .lnk-edit {
+		font: 1.2em "NunitoLight";
+		color: #000;
+	}
+
+	.lnk-edit {
+		color: #92278f;
+		cursor: pointer;
+	}
+
+	.lnk-disable {
+		color: #a7a6a6;
+	}
+
+	.button-position {
+		position: absolute;
+		top: 103px;
+	}
+
+	.btn-reset-mobile {
+		display: none;
+	}
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+@media screen and (max-width: 1023px) {
+    .setting-content {
+		padding: 45px 30px;
+		max-width: 100%;
+
+		.lbl-title, .lbl-value, .lnk-edit {
+			font-size: 0.9em;
+		}
+
+		.btn-reset-mobile {
+			display: block
+		}
+
+		.cls-display-block {
+			.btn-reset-desktop {
+				display: none;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 480px) {
+    .setting-content {
+		padding: 45px 20px;
+		max-width: 100%;
+	}
+}

@@ -1,0 +1,7 @@
+.notification-item .noti-img .md-button {
+	padding: 0;
+}
+
+.notification-item .noti-img .md-button .notification-img {
+	background-size: contain;
+}

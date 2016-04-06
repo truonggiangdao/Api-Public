@@ -1,0 +1,85 @@
+/* repost thanks page*/
+@import 'repost_thanks';
+
+.repost-content {
+	.img-user{
+		height: 40px !important;
+		width: auto;
+	}
+
+	.img-photo{
+		width: 100%;
+		height: auto;
+		max-height: 255px;
+	}
+
+	.icon-repost {
+		height: 20px;
+    	width: auto;
+    	display: inline !important;
+    	margin-right: 10px;
+	}
+
+	.username{
+		color: #777777;
+		font: 1.2em "NunitoBold";
+	}
+
+	.user-repost {
+		margin: 10px 25px 10px;
+	}
+
+	.user-post{
+		margin: 10px 10px 10px 25px;
+	}
+
+	.des-story {
+		margin: 0 24px;
+
+		.description {
+			color: #777;
+			font-size: 1.2em;
+		}
+	}
+
+	.report-button {
+		margin: 15px;
+	}
+
+	.btn-close-modal {
+		margin-top: 15px;
+	}
+}
+
+@media screen and (max-width: 1023px) {
+	.repost-content {
+
+		.username{
+			font-size: 0.9em;
+		}
+
+		.des-story {
+
+			.description {
+				font-size: 0.8em;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.repost-content {
+
+	    .user-repost {
+			margin: 10px 10px 15px;
+		}
+
+		.user-post {
+			margin: 15px 10px 10px 10px;
+		}
+
+		.des-story {
+		    margin: 0 10px;
+		}
+	}
+}

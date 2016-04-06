@@ -1,0 +1,25 @@
+<div class="custom-modal delete-story-modal {{ delete_story_state }}" id="deleteStoryModal" 
+	role="dialog" ng-controller="DeleteStoryCtrl">
+	<div class="custom-dialog delete-story-dialog">
+		<div class="delete-story">
+			<div class="row">
+		        <div class="col-xs-12">
+					<md-button class="btn-close-modal" aria-label="icon"  ng-click="closeDeleteStoryModal()" >
+					</md-button>
+		        </div>
+		    </div>
+		    <div class="clear"></div>
+		    <div class="row content text-center">
+				<div class="col-xs-12">
+					<h1 class="title">Delete this Medtale</h1>
+				</div>
+				<div class="col-xs-12">
+					<span class="message">Are you sure you want to delete this Medtale?</span>
+				</div>
+				<div class="col-xs-12 no-pl no-pr submit-button">
+					<md-button class="btn-def btn-submit-report" ng-click="deleteStory()">Delete</md-button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,46 @@
+{
+    "user_followers":[
+    { 
+        "id": 1, 
+        "username": "Username Username", 
+        "hospitial_name": "Hospital Affiliation Name",
+        "image_url": "../../img/demo_user.png"
+    }, 
+    {
+        "id": 2, 
+        "username": "Username Username", 
+        "hospitial_name": "Hospital Affiliation Name",
+        "image_url": "../../img/demo_user.png"
+    }, 
+    {
+        "id": 3, 
+        "username": "Username Username", 
+        "hospitial_name": "Hospital Affiliation Name",
+        "image_url": "../../img/demo_user.png"
+    }, 
+    {
+        "id": 4, 
+        "username": "Username Username", 
+        "hospitial_name": "Hospital Affiliation Name",
+        "image_url": "../../img/demo_user.png"
+    }, 
+    { 
+        "id": 5, 
+        "username": "Username Username", 
+        "hospitial_name": "Hospital Affiliation Name",
+        "image_url": "../../img/demo_user.png"
+    }, 
+    {
+        "id": 6, 
+        "username": "Username Username", 
+        "hospitial_name": "Hospital Affiliation Name",
+        "image_url": "../../img/demo_user.png"
+    }, 
+    {
+        "id": 7, 
+        "username": "Username Username", 
+        "hospitial_name": "Hospital Affiliation Name",
+        "image_url": "../../img/demo_user.png"
+    }
+]
+}

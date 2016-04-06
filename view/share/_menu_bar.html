@@ -1,0 +1,42 @@
+<!-- profile-menu -->
+<div class="profile-menu">
+	<div class="row pb-10">
+		<div class="col-xs-12">
+			<img ng-src="{{profile_image}}" class="img-circle icon-profile"/>
+		</div>
+	</div>
+	<div class="row">
+
+		<div class="col-xs-12">
+			<!-- Menu Item -->
+			<ul class="profile-menu-list">
+				<li class="menu-item">
+					<md-button class="btn-menu-item" aria-label="icon" ng-href="/">
+						My Feed
+					</md-button>
+				</li>
+				<li class="menu-item">
+					<md-button class="btn-menu-item" aria-label="icon" ng-href="#/profile?profileId=1">
+						My Profile
+					</md-button>
+				</li>
+				<li class="menu-item">
+					<md-button class="btn-menu-item" aria-label="icon" ng-href="#/privacy">
+						Privacy Policy
+					</md-button>
+				</li>
+				<li class="menu-item">
+					<md-button class="btn-menu-item" aria-label="icon" ng-href="#/setting">
+						Settings
+					</md-button>
+				</li>
+				<li class="menu-item">
+					<md-button class="btn-menu-item" aria-label="icon" ng-click="logOut()">
+						{{login_logout}}
+					</md-button>
+				</li>
+			</ul>
+		</div>
+
+	</div>
+</div>

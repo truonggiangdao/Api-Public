@@ -1,0 +1,439 @@
+/* CSS Home page*/
+
+body{
+	font-size: 12px;
+}
+
+h1{
+	font: 2em 'NunitoBold'; 
+	color: #4c0055;
+	margin: 0;
+
+}
+
+h2{
+	font-size: 1.8em;
+	margin: 0;
+}
+
+h3{
+	font-size: 1.6em;
+	margin: 0;
+}
+
+h4{
+	font-size: 1.4em;
+	margin: 0;
+}
+
+h5{
+	font-size: 1.2em;
+	margin: 0;
+}
+
+h6{
+	font-size: 1.1em;
+	margin: 0;
+    line-height: 1.2em !important;
+}
+
+p{
+	font-size: 1em;
+	font-family: "NunitoLight";
+	line-height: 1.3em !important;
+}
+
+label{
+	margin: 0;
+	
+}
+
+/* HEADER */
+@import 'header';
+
+/* Top Slider */
+@import 'swiper_slide';
+
+/* Grid */
+@import 'grid';
+
+/* EXPANDED STORY*/
+@import 'expanded_story';
+
+/* Lightbox*/
+@import 'lightbox';
+
+/* Submit story*/
+@import 'submit_story';
+
+/* Repost story*/
+@import 'repost';
+
+.main-section {
+	background-color: $background-color !important;
+
+	.home-feature {
+		background-color:#fff;
+		margin: 10px 10px 0 10px;
+		position: relative;
+		box-shadow: 0 0 20px rgba(119, 119, 119, 0.54);
+
+		.feature-img {
+			position: relative;
+			overflow: hidden; 
+			height: 300px;
+			img{
+				width: 100% !important;
+			}
+
+		}
+
+		.feature-details{
+			padding: 30px 15px 3px 20px;
+
+			.title {
+				color: #4c0055;
+				margin-bottom: 10px;
+			    line-height: normal;
+    			font-family: "NunitoBold";
+			}
+
+			.description{
+				color: #000;
+			    margin: 5px 0;
+			}
+
+			.read-more{
+			    float: right;
+			    color: #92278f;
+			    font: 0.8em "NunitoBold";
+			    padding-top: 4px;
+			    text-transform: none;
+			    min-height: 20px;
+    			min-width: 0px;
+			}
+		}
+
+		.action{
+			position: absolute;
+		 	bottom: 0;
+		 	right: 0;
+		 	
+			.action-left{
+				padding-top: 5px;
+				display: -webkit-box;
+			    display: -ms-flexbox;
+			    display: -webkit-flex;
+			    display: flex;
+			    flex-direction: row;
+			    justify-content: flex-start;
+
+				.icon-hipaa{
+					height: 34px;
+				}
+
+				.cls-follow{
+					padding: 5px 0 10px 0;
+					display: -ms-inline-flexbox;
+				}
+
+				.txt-anno{
+					font: 0.9em "NunitoBold";
+					color: #777777;
+				    margin: 0 15px 0 5px;
+				}
+			}
+
+			.action-right{
+				padding-top: 7px;
+			   	display: -webkit-box;
+			    display: -ms-flexbox;
+			    display: -webkit-flex;
+			    display: flex;
+			    flex-direction: row;
+			    justify-content: flex-end;
+			}
+		}
+	}
+}
+
+.action-item {
+	display: -webkit-inline-flex;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+	padding-right: 20px;
+}
+
+.action-item:last-child{
+	padding-right: 0px;
+}
+
+.action-item >img, .reposted-info >img, .user-info >img{
+	width: auto;
+	vertical-align: middle;
+	display: inline;
+}
+
+.txt-number{
+	color: #808285;
+	font: 0.8em "NunitoRegular";
+}
+
+.cls-hipaa-mobile, .action-mobile{
+	display: none;
+}
+
+
+@media  screen and (min-width: 1024px) and (max-width: 1365px) {
+	.action-item{
+    	padding-right: 7px;
+    }
+}
+
+/* Mobile mode*/
+
+@media screen and (max-width: 1023px) {
+	body{
+		font-size: 25px;
+	}
+
+	h1{
+		font-size: 1.2em;
+		line-height: 1.3em !important;
+	}
+
+	h5{
+		font-size: 1.1em;
+	}
+
+	h6{
+		font-size: 1.3em;
+	}
+
+	p{
+		font-size: 1em;
+		line-height: 1.2em !important;
+	}
+
+	.main-section {
+
+		.home-feature{
+			margin: 30px 0 10px 0;
+
+			.feature-img {
+				width: 100% !important; 
+				height: auto;
+			}
+
+			.feature-details{
+				width: 100% ;	
+				padding-top: 15px;
+
+				.read-more{
+					padding-bottom: 20px;
+				}
+			}
+
+			.action{
+				width: 100%;
+				position: relative;
+			}
+
+			.cls-hipaa-mobile{
+				display: -webkit-inline-flex;
+				display: -ms-inline-flexbox;
+				display: inline-flex;
+
+				.feature-icon{
+				    padding: 0 0 15px 0px;
+
+				}
+
+				.txt-anno {
+					font: 0.9em "NunitoBold";
+    				color: #777777;
+				}
+			}
+
+			.action-mobile{
+				display: -webkit-inline-flex;
+				display: -ms-inline-flexbox;
+				display: inline-flex;
+				padding-bottom: 10px;
+				border-top: 1px solid #b5b5b6;
+
+				.action-left-mobile{
+				   	display: -webkit-box;
+				    display: -ms-flexbox;
+				    display: -webkit-flex;
+				    display: flex;
+				    flex-direction: row;
+				    justify-content: flex-start;
+				    margin-left: 10px;
+				}
+
+				.action-right-mobile{
+				   	display: -webkit-box;
+				    display: -ms-flexbox;
+				    display: -webkit-flex;
+				    display: flex;
+				    flex-direction: row;
+				    justify-content: flex-end;
+				    margin: 11px 10px 0 0;
+				}
+			}
+		}
+
+		
+	}
+
+	.action-item {
+    	padding-right: 55px;
+    }
+
+	.action-desktop{
+		display: none;
+	}
+}
+
+@media (max-width: 768px) {
+	.main-section{
+		.home-feature {
+			margin: 15px 0 10px 0;
+		}
+	} 
+
+	.action-item {
+		padding-right: 40px;
+	}
+}
+
+@media (max-width: 720px) {
+	body {
+		font-size: 22px;
+	}
+
+
+	.action-item {
+		padding-right: 30px;
+	}
+}
+
+@media (max-width: 600px){
+	.main-section{
+		
+		.home-feature{
+			
+			.action-mobile{
+				.action-right-mobile{
+					margin-top: 7px;
+				}
+			}
+
+			.cls-hipaa-mobile {
+				.feature-icon {
+					padding: 0 0 15px 0px;
+
+					img {
+						height: 55px;
+					}
+				}
+			}
+		}
+	}
+
+	.action-item {
+		padding-right: 25px;
+	}
+
+	.txt-number{
+		font-size: 0.7em;
+	}
+}
+
+@media (max-width: 480px) {
+	body{
+		font-size: 16px;
+	}
+
+	.main-section{
+
+		.home-feature{
+			
+			.feature-details{
+				.read-more{
+				    padding-bottom: 10px;
+				}
+			} 
+			.action-mobile{
+				.action-right-mobile{
+					margin-top: 11px;
+				}
+			} 
+		}
+	}
+
+	.action-item {
+		padding-right: 16px;
+	}
+}
+
+@media (max-width: 360px) {
+	body{
+		font-size: 15px;
+	}
+
+	.main-section {
+		.home-feature{
+			.action-mobile{
+				.action-right-mobile{
+					margin-top: 6px;
+				}
+			}
+
+			.icon-hipaa {
+				height: 45px;
+			}
+		}
+	}
+
+	.action-item {
+		padding-right: 10px;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.main-section{
+		.home-feature {
+			.feature-img {
+				.btn-img{
+					position: absolute;
+					top: 30%;
+					left: 50%;
+					transform: translate(-50%, -30%);
+				}
+
+				img {
+					min-height: 300px;
+				}
+			}
+		}
+
+	}
+}
+
+@media screen and (min-width: 2000px) {
+	.main-section{
+	
+		.home-feature {
+			.feature-img {
+				height: 450px;
+
+				img{
+					min-height: 450px;
+				}
+			}
+		}
+
+	}
+}

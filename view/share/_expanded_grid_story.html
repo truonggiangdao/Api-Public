@@ -1,0 +1,16 @@
+<div class="grid-content">
+
+	<!--Grid image content-->
+	<div class="grid-img-content" id="gridImageContent">
+		<div class="swiper-container swiper-expanded" id="swiperImageExpanded">
+	        <div class="swiper-wrapper">
+	            <div class="swiper-slide"  ng-repeat="slide in slides">
+	            	<div class="item-grid">
+		            	<md-button class="btn-img image-details" ng-class="{{slide.is_video}} ? 'btn-video' : ''" ng-click="showLightbox(slide)" aria-label="img" style="background-image: url({{slide.image_url}})">
+		    			</md-button>
+	    			</div>
+				</div>
+	        </div>
+		</div>
+	</div>
+</div>

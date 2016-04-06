@@ -1,0 +1,152 @@
+.imageupload {		
+    position: absolute;		
+    height: 100%;		
+    width: 100%;		
+    z-index: 1001;		
+    cursor: pointer;		
+}	
+
+.invalid-msg, .invalid-msg-image {		
+    color: #E05151;		
+    font-weight: 500;		
+    font-size: 10pt;		
+}
+
+.invalid-msg-image {
+    margin-left: 4%;
+}
+
+.invalid-msg-color {
+    color: #E05151 !important;
+} 	
+
+ul.ui-autocomplete.ui-menu {		
+    z-index: 1001;
+}
+
+[type="url"].txt-def {      
+    width: 100%;        
+    height: 40px;       
+    padding: 10px;      
+    color: #000;        
+    font: 1em 'NunitoLight';     
+}
+
+[type="url"].txt-video-link {       
+    background-color: #e9e9e9;
+}
+
+.report .chk-report {
+   display: block;
+}
+
+[type="password"].txt-def {
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    color: #000;
+    font: 1em 'NunitoLight';
+}
+
+.cls-img-preview .image-details, .file-field.input-field .imageupload {
+    /*background-image: url(../../img/demo_img_preview.png);*/
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    height: 100%;
+}
+
+.cls-img-preview .image-details.bg-full-width, .file-field.input-field .imageupload {
+    height: 1px;
+    padding-bottom: 87%;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+.file-field.input-field .imageupload {
+    margin: -9px -11px;
+    padding-bottom: 60%;
+    background-position: 50% 20%;
+    cursor: pointer;
+}
+
+.error .text-left, .confirm .text-left {
+    padding: 5%;
+    margin: 0px 5px;
+}
+.error .btn-row, .confirm .btn-row {
+    text-align: right;
+    padding: 0px 7% 25px 14px;
+}
+.msg-inform-error, .content-inform {
+    font-weight: 600;
+    font-size: 12pt;
+}
+
+.btn-error-ok {
+    width: 90px;
+}
+
+.img-circle.icon-profile {
+    width: 41.4688px;
+}
+    
+.msgErrLoginRegis {
+    color: #E05151;
+}    
+
+.img-user.img-circle {
+    width: 30px;
+}
+
+@media (max-width: 1023px){
+    .img-user.img-circle   {
+        width: 80px !important;
+    }
+}
+
+@media (max-width: 720px){
+    .img-user.img-circle   {
+        width: 70px !important;
+    }
+}
+
+@media (max-width: 480px){
+    .img-user.img-circle   {
+        width: 55px !important;
+    }
+}
+
+@media (max-width: 360px){
+    .img-user.img-circle   {
+        width: 45px !important;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .main-section .home-feature .cls-hipaa-mobile {
+        display: block;
+    }
+}
+
+.healthcare_professional {
+    background-color: #e4f2e7 !important;
+}
+
+.patient_anonymous {
+    background-color: #ffffff !important;
+}
+
+.comment_repost {
+    background-color: #fee7dc !important;
+}
+
+.md-button.btn-img.btn-video {
+    overflow: hidden;
+}
+
+.msg-resetPass {
+    margin-left: -14px; 
+}

@@ -1,0 +1,203 @@
+.grid-main {
+	margin: 5px 15px 0 15px;
+
+	.item-photo {
+		background-color: #e4f2e7;
+	}
+
+	.item-reposted, .item-commented{
+		background-color: #fee7dc;
+	}
+
+	.img-user{
+		height: 30px !important;
+		width: auto;
+	}
+
+	.username{
+		color: #777777;
+		padding-left: 8px;
+		font: 0.9em "NunitoBold";
+	}
+
+	.title{
+		color: #000;
+		font-family: "NunitoBold";
+		padding-bottom: 8px;
+	}
+
+	.description{
+		color: #777777;
+	}
+
+	.user-info{
+		padding: 5px 0 10px 5px;
+	}
+
+	.reposted-info{
+		padding: 8px 0 10px 30px;
+
+		.icon-reposted{
+			padding-right: 7px;
+		}
+	}
+
+	.action-image{
+		display: -webkit-box;
+	    display: -ms-flexbox;
+	    display: -webkit-flex;
+	    display: flex;
+	    flex-direction: row;
+	    justify-content: flex-start;
+	}
+
+	.item {
+		position:relative;
+		overflow:hidden;
+	}
+}
+
+.grid-sizer, .grid-item {
+  width: 25%;
+}
+
+md-card{
+	border-radius: 0 !important;
+	margin: 10px;
+	box-shadow: 0 0 20px rgba(119, 119, 119, 0.54);
+	
+	md-card-title md-card-title-media{
+		margin-top: 0 !important;
+	}
+	md-card-content{
+		padding: 0 10px 10px 10px;
+	}
+
+	md-card-title-media{
+		width: 100%;
+	}
+} 
+
+/* Mobile mode*/
+
+@media screen and (max-width: 1023px) {
+	.grid-main {
+	    margin: -3px 7px 0 7px;
+
+	    .img-video{
+	    	height: auto !important;
+	    }
+
+	    .img-photo{
+	    	height: auto !important;
+	    }
+
+	    .user-info{
+	    	padding: 15px 0 25px 0px;
+	    }
+
+	    .img-user{
+	    	height: 80px !important;
+	    }
+
+	    .username{
+	    	padding-left: 20px;
+	    }
+
+	    .reposted-info {
+	    	padding: 15px 0 15px 40px;
+
+	    	.icon-reposted {
+		    	padding-right: 20px;
+		    }
+	    }
+
+	    .item-action{
+	    	margin: 5px 10px 10px 10px
+	    }
+
+	    .txt-right{
+	    	padding-top: 11px;
+	    }
+
+	    .fix-image {
+			height: auto;
+
+			.img-photo {
+				min-height: auto;
+			}
+		}
+	}	
+
+	md-card{
+		margin: 7px;
+		md-card-content{
+			padding: 0 20px 20px 20px;
+		}
+	} 
+
+	.grid-sizer, .grid-item {
+		width:100%;
+	}
+}
+
+@media (max-width: 720px) { 
+	.grid-main{
+
+		.user-info{
+		    padding: 15px 0 20px 0px;
+		}
+
+		.reposted-info {
+			padding: 8px 0 10px 35px;
+
+			.icon-reposted {
+		    	padding-right: 10px;
+		    }
+		}
+
+		.img-user {
+		    height: 70px !important;
+		}
+
+		.username {
+			padding-left: 20px;
+		}
+	}
+}
+
+@media (max-width: 480px) { 
+	.grid-main{
+
+		.reposted-info{
+
+			.icon-reposted{
+			    padding-right: 5px;
+			}
+		}
+
+		.user-info{
+		    padding: 15px 0 10px 0px;
+		}
+
+		.img-user{
+		    height: 55px !important;
+		}
+
+		.username{
+			padding-left: 10px;
+		}			
+	}
+}
+
+@media (max-width: 360px) { 
+	.grid-main{
+		.user-info{
+		    padding: 15px 0 10px 0px;
+		}
+
+		.img-user{
+		    height: 45px !important;
+		}		
+	}
+}

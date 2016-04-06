@@ -1,0 +1,36 @@
+<div class="container-fluid user-followers">
+	<div class="user-details" ng-repeat="user in user_followers">
+		<div class="row user-details-desktop" >
+			<div class="col-xs-4">
+				<img ng-src="{{user.image_url}}" class="img-user-follower"/>
+				<span class="detail-info">
+					{{user.username}} <br/>
+					{{user.hospitial_name}}
+				</span>
+			</div>
+			<div class="col-xs-4">
+				<img ng-src="{{user.image_url}}" class="img-user-follower"/>
+				<span class="detail-info">
+					{{user.username}} <br/>
+					{{user.hospitial_name}}
+				</span>
+			</div>
+			<div class="col-xs-4">
+				<img ng-src="{{user.image_url}}" class="img-user-follower"/>
+				<span class="detail-info">
+					{{user.username}} <br/>
+					{{user.hospitial_name}}
+				</span>
+			</div>
+		</div>
+		<div class="row user-details-mobile">
+			<div class="col-xs-12">
+				<img ng-src="{{user.image_url}}" class="img-user-follower"/>
+				<span class="detail-info">
+					{{user.username}} <br/>
+					{{user.hospitial_name}}
+				</span>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en" ng-app="homeApp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>medtales</title>
+  <link rel="shortcut icon" type="image/favicon" href="img/favicon.png"/>
+  <link rel="stylesheet" href="content/css/boostrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="content/css/MalihuCustomScrollbar.min.css">
+  <link rel="stylesheet" href="content/css/angular-material.min.css">
+  <link rel="stylesheet" href="content/css/material.indigo-pink.min.css">
+  <link rel="stylesheet" href="content/css/swiper.min.css">
+  <link rel="stylesheet" href="content/css/jquery-ui.css">
+
+  <link rel="stylesheet" href="content/css/main.min.css">
+  <link rel="stylesheet" href="content/css/tam.css">
+  <link rel="stylesheet" href="content/css/tinbui.css">
+</head>
+<body>
+    
+    <header ui-view="header"></header>
+    <section id="section-notification-mobile" ui-view="notification-mobile-section"></section>
+    <section id="main-container">
+      <div ui-view="main-section" class="main-section">
+      </div>    
+    </section>
+    <section id="modal-container" ui-view="modal-section"></section>
+    <!-- Expanded story view -->
+    <section ng-include="'view/share/_expanded_story.html'" class="expanded-story" ui-view="expanded-story"></section>
+
+    <!-- Lightbox modal -->
+    <section ng-include="'view/share/_lightbox.html'" id="lightbox-container" ui-view="lightbox"></section>
+    
+    <!-- Lightbox video modal -->
+    <section ng-include="'view/share/_lightbox_video.html'"></section>
+
+    <!-- Submit story modal-->
+    <section ng-include="'view/share/_submit_story.html'"></section>
+
+    <!-- Submit story success modal-->
+    <section ng-include="'view/share/_submit_story_success.html'"></section>
+
+    <!-- Repost modal-->
+    <section ng-include="'view/share/repost.html'"></section>
+    <!-- Repost modal-->
+    <section ng-include="'view/share/repost_thanks.html'"></section>
+
+  <script src="app/js/jquery-2.2.0.min.js"></script>
+  <script src="app/js/jquery-ui.js"></script>
+  <script src="app/js/angular.min.js"></script>
+  <script src="app/js/angular-sanitize.min.js"></script>
+  <script src="app/js/angular-ui-router.min.js"></script>
+  <script src="app/js/angular-resource.min.js"></script>
+  <script src="app/js/angular-material.js"></script>
+  <script src="app/js/swiper.min.js"></script>
+
+  <script src="app/js/angular-masonry-directive.js"></script>
+  <script src="app/js/masonry.pkgd.min.js"></script>
+  <script src="app/js/angular-animate.min.js"></script>
+  <script src="app/js/angular-aria.min.js"></script>
+  <script src="app/js/imagesloaded.pkgd.js"></script>
+  <script src="app/js/angular-masonry.min.js"></script>
+  
+  <!-- Custom ScrollBar -->
+  <script src="app/js/jquery.MalihuCustomScrollbar.min.js"></script>
+  <script src="app/js/angular-scrollbars.js"></script>  
+
+  <!--Slider expanded story-->
+  <script src="app/js/TweenMax.min.js"></script>
+  <script src="content/css/boostrap/js/bootstrap.min.js"></script>
+
+  <script src="app/controllers/homeController.js"></script>
+  <script src="app/controllers/profileController.js"></script>
+  <script src="app/controllers/settingController.js"></script>
+  <script src="app/services/homeService.js"></script>
+  <script src="app/js/app.js"></script>
+</body>
+</html>

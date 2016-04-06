@@ -1,0 +1,55 @@
+<div class="cls-header {{ header_state }}">
+	<!-- Navigation Bar -->
+	<div class="nav-wrapper">
+	  	<div class="row">
+			<div class="col-md-4 col-sm-4 col-xs-4 logo" >
+				<!-- Logo -->
+				<md-button class="btn-nav" ng-href="../../" aria-label="icon" >
+					<img ng-src="../../img/logo_menu_small.png"/>
+				</md-button>
+			</div>
+			<div class="col-md-8 col-sm-8 col-xs-8 item">
+
+				<!-- Search -->
+				<md-button class="btn-nav" aria-label="icon" ng-click="showSearchBar(); $event.stopPropagation();">
+					<img ng-src="../../img/icon_nav_search.png" class="icon-search"/>
+				</md-button>
+
+				<!-- Submit Story -->
+				<md-button class="btn-nav" aria-label="icon" ng-click="showSubmitStory(); $event.stopPropagation();">
+					<img ng-src="../../img/icon_nav_add.png" class="icon-add"/>
+				</md-button>
+
+				<!-- Notification Full page -->
+				<span class="btn-notification-wp">
+					<md-button class="btn-nav" aria-label="icon" ng-click="showNotification(); $event.stopPropagation();">
+						<img ng-src="../../img/icon_nav_notification.png" class="icon-notification"/>
+
+						<span class="notification-number-wrapper {{ show_unread }}">
+							<span class="notification-number">{{ number_of_unreads }}</span>
+						</span>
+					</md-button>
+
+					<!-- Notification Bar -->
+					<div class="notification-container" ng-include="'view/share/_notifications.html'"></div>
+
+				</span>
+				
+				<!-- Menu Profile -->
+				<md-button class="btn-nav" aria-label="icon" ng-click="showMenuProfile(); $event.stopPropagation();">
+					<img ng-src="{{profile_image}}" class="img-circle icon-profile"/>
+					<span class="user-name hidden-xs hidden-sm">{{username}}</span>
+				</md-button>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- Search Bar -->
+	<div class="search-bar-container" ng-include="'view/share/_search_bar.html'"></div>
+
+	<!-- Menu Bar -->
+	<div class="menu-bar-container" ng-include="'view/share/_menu_bar.html'"></div>
+
+</div>
+

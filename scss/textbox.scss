@@ -1,0 +1,23 @@
+[type="text"] {
+	
+	&.txt-def {
+		width: 100%;
+		height: 40px;
+		padding: 10px;
+		color: #000;
+		font: 1em 'NunitoLight';
+	}
+
+	&.txt-video-link {
+		background-color: #e9e9e9;
+	}
+}
+
+@media screen and (max-width: 1023px) {
+	[type="text"] {
+	
+		&.txt-def {
+			font-size: 0.7em;
+		}
+	}
+}

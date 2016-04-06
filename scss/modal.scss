@@ -1,0 +1,296 @@
+body.modal-open {
+	position: fixed;
+}
+#modal-container {
+	
+	color: #92278f;
+
+	.modal-section {
+		display: none;
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		z-index: 10;
+		background-color: rgba(0,0,0,.6);
+		animation-name: fadeIn;
+		-webkit-animation-name: fadeIn;
+		animation-duration: .3s; 
+		-webkit-animation-duration: .3s;
+		animation-timing-function: ease-in-out;  
+		-webkit-animation-timing-function: ease-in-out;
+
+		&.showSubmitModal {
+			display: block;
+		}
+
+		.submit-modal {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 300px;
+			height: 300px;
+			margin-top: -150px;
+			margin-left: -150px;
+			padding-top: 30px;
+			
+			background-color: white;
+			animation-name: slideLeft;
+			-webkit-animation-name: slideLeft;
+			animation-duration: .5s; 
+			-webkit-animation-duration: .5s;
+			animation-timing-function: ease-in-out;  
+			-webkit-animation-timing-function: ease-in-out;
+		}
+	}
+}
+
+
+.custom-modal {
+	display: none;
+	position: fixed;
+	top: 61px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 901;
+	background-color: rgba(0,0,0,.6);
+	animation-name: fadeIn;
+	-webkit-animation-name: fadeIn;
+	animation-duration: .3s; 
+	-webkit-animation-duration: .3s;
+	animation-timing-function: ease-in-out;  
+	-webkit-animation-timing-function: ease-in-out;
+    overflow-x: hidden;
+	overflow-y: auto;
+
+	&.show-modal {
+		display: block;
+	}
+
+	.custom-dialog {
+		position: relative;
+		width: 890px;
+		
+		background-color: white;
+		animation-name: slideLeft;
+		-webkit-animation-name: slideLeft;
+		animation-duration: .5s; 
+		-webkit-animation-duration: .5s;
+		animation-timing-function: ease-in-out;  
+		-webkit-animation-timing-function: ease-in-out;
+		margin: 95px auto 0 auto;
+		box-shadow: 0 0 10px rgba(212, 212, 212, 0.54);
+
+		&.report-story-dialog, &.delete-story-dialog {
+			width: 435px;
+		}
+
+		&.repost-dialog {
+			width: 430px;
+			background-color: #fee7dc;
+			margin-top: 20px;
+		}
+
+		&.repost-thanks-dialog {
+			width: 400px;
+			background-color: #fee7dc;
+		}
+
+		&.lightbox-dialog,&.lightbox-video-dialog {
+			margin-top: 20px;
+		}
+
+		&.lightbox-video-dialog {
+			background-color: black;
+
+			.md-button {
+				&.btn-close-modal {
+					background-image: url(../../img/icon_delete.png);
+				}
+			}
+		}
+
+		&.lightbox-dialog {
+			.story-description {
+				position: absolute;
+				width: 100%;
+				height: auto;
+				padding: 0 20px;
+				color: white;
+				bottom: 20px;
+    			left: 0;
+    			text-shadow: 0px 1px 2px rgba(0,0,0,0.5);
+    			font-size: 2em;
+    			line-height: 1.2em;
+    			font-family: "NunitoLight";
+    			text-align: right;
+
+    			.description {
+    				height: 2.4em;
+    				overflow: hidden;
+    				text-align: justify;
+    			}
+
+    			.lightbox-read-more-btn {
+    				display: inline;
+    				margin: 0;
+    				padding: 0;
+    				text-shadow: 0px 1px 2px rgba(0,0,0,0.5);
+    				text-transform: lowercase;
+    				color: #92278f;
+    				font-size: 1em !important;
+    				line-height: 1.2em;
+    				min-height: auto;
+    				min-width: auto;
+    			}
+
+				&.show-more {
+					.description {
+						height: auto;
+					}
+
+					.lightbox-read-more-btn {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+}
+
+.modal {
+	top: 61px;
+	z-index: 900;
+}
+
+.modal-dialog{
+	margin: 20px auto 0 auto;
+	box-shadow: 0 0 10px rgba(212, 212, 212, 0.54);
+	background-color: white;
+
+	/*.close-dialog {
+		float: right;
+		margin: 5px 15px 10px 0;
+	}*/
+
+	&.modal-expanded-story{
+		width: 870px;
+	}
+
+	.close-icon-modal {
+		height: 18px;
+	}
+
+	&.submit-story-dialog, &.submit-story-success-dialog {
+		width: 870px;
+	}
+}
+
+.modal-backdrop{
+	z-index: 800;
+    background-color: #5a5a5b;
+}
+
+@media screen and (max-width: 1023px) {
+	.modal {
+		padding-right: 0 !important;
+	}
+
+	.modal-dialog {
+
+		/*.close-dialog {
+			float: right;
+			margin: 15px;
+		}
+
+        .close-icon-modal {
+			height: 30px;
+		}
+		*/
+		&.modal-expanded-story, &.submit-story-success-dialog,
+		&.submit-story-dialog {
+			width: 100%;
+			margin-top: 0;
+		}
+
+	}
+
+	
+	.custom-modal {
+
+		&.lightbox-video-modal, &.lightbox-modal {
+			top: 0;
+			background-color: #000;
+			z-index: 903;
+		}
+		
+		.custom-dialog {
+			width: 100%;			
+			margin-top: 0;
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			animation-name: fadeIn;
+    		-webkit-animation-name: fadeIn;
+
+			&.report-story-dialog, &.delete-story-dialog
+			, &.repost-dialog, &.repost-thanks-dialog
+			, &.lightbox-dialog, &.lightbox-video-dialog {
+				width: 100%;
+				margin-top: 0;
+			}
+
+			&.lightbox-video-dialog {
+				max-height: 100%;
+			}
+
+			&.lightbox-dialog {
+				.story-description {
+					font-size: 0.8em;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.custom-modal {
+		.custom-dialog {
+			&.repost-dialog, &.report-story-dialog {
+				top: calc(61px + 5vh);
+				transform: translate(-50%, 0%);
+			}
+
+			&.lightbox-dialog {
+				.story-description {
+					padding: 0 10px;
+					bottom: 10px;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.custom-modal {
+		.custom-dialog {
+			&.repost-dialog, &.report-story-dialog {
+				top: 61px;
+				transform: translate(-50%, 0%);
+			}
+
+			&.lightbox-dialog {
+				.story-description {
+					/*font-size: 1em;*/
+				}
+			}
+		}
+	}
+}
+
+.custom-modal-open {
+	overflow: hidden;
+}

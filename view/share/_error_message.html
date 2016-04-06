@@ -1,0 +1,21 @@
+  <div class="custom-modal" id="errorModal" role="dialog" ng-controller="SubmitStoryCtrl" data-backdrop="static">
+    <div class="custom-dialog custome-sm">
+    	<div class="error">
+    		<div class="row">
+		        <div class="col-xs-12">
+					<md-button class="btn-close-modal" aria-label="icon" ng-click="closeErrorModal()" >
+					</md-button>
+		        </div>
+		    </div>
+		    <div class="clear"></div>
+		    <div class="row content">
+		    	<div class="col-xs-12 text-left">
+					<span class="msg-inform-error" id="msg-inform-error"></span>
+				</div>
+				<div class="col-xs-12 btn-row">
+					<input class="btn btn-defaul btn-error-ok" type="button" value="OK" ng-click="closeErrorModal()">
+				</div>
+			</div>
+		</div>
+    </div>
+  </div>

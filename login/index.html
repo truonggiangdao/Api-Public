@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en" ng-app="loginApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+    <link rel="shortcut icon" type="image/favicon" href="../img/favicon.png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="../content/css/boostrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../content/css/angular-material.min.css">
+    <link rel="stylesheet" href="../content/materialize/css/materialize.min.css">
+    <link rel="stylesheet" href="../content/css/main.min.css">
+    <link rel="stylesheet" href="../content/css/login_layout.min.css">
+    <link rel="stylesheet" href="../content/css/tam.css">
+</head>
+<body ng-controller="IndexCtl">
+
+<div class="login-page {{ index_state }}" >
+    
+    <!-- Main View -->
+    <div id="main" ui-view="main"></div>
+
+    <!-- Set Account Username View -->
+    <div id="setUsername" ui-view="setUsername"></div>
+
+    <!-- Set Profile Picture View -->
+    <div id="profilePicture" ui-view="profilePicture"></div>
+
+    <!-- Login View -->
+    <div id="login" ui-view="login"></div>
+
+    <!-- Set Email-Password View -->
+    <div id="setEmailPassword" ui-view="setEmailPassword"></div>
+
+    <!-- Set healthcare Professional View -->
+    <div id="healthcarePro" ui-view="healthcarePro"></div>
+
+    <!-- Login View -->
+    <div id="loggedInProfile" ui-view="loggedInProfile"></div>
+
+</div>
+
+    <script src="../app/js/jquery-2.2.0.min.js"></script>
+    <script src="../content/css/boostrap/js/bootstrap.min.js"></script>
+    <script src="../app/js/angular.min.js"></script>
+    <script src="../app/js/angular-ui-router.min.js"></script>
+    <script src="../app/js/angular-material.js"></script>
+    <script src="../app/js/angular-animate.min.js"></script>
+    <script src="../app/js/angular-resource.min.js"></script>
+    <script src="../app/js/angular-aria.min.js"></script>
+    <script src="../content/materialize/js/materialize.min.js"></script>
+
+    <script src="../app/controllers/loginController.js"></script>
+    <script src="../app/services/loginService.js"></script>
+    <script src="../app/js/app.js"></script>
+    
+
+</body>
+</html>

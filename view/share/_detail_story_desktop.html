@@ -1,0 +1,71 @@
+<div class="row action-content">
+	<div class="col-xs-6 no-pr action-left">
+		<div class="user-info">
+			<md-button ng-href="/view/profile" class="btn-user btn-link" aria-label="img">
+				<img ng-src="../../img/icon_user.png" class="img-user"/> 
+			</md-button>
+			<md-button ng-href="/view/profile" class="username btn-link">
+				<span>{{story.username}}</span>
+			</md-button>
+			<md-button class="btn-def btn-follow-story follow-{{story.user_id}}" ng-class="'{{story.is_follow}}' == 'true'? 'btn-following' : 'btn-follow'" ng-click="changeStatus($event, story.user_id)" ng-if="story.is_owner == 'false'" aria-label="img">
+			</md-button>
+		</div>
+	</div>
+	<div class="col-xs-6 no-pl action-right">
+    	<div class="action-item">
+ 			<label class="like-{{story.id}}">
+     			<md-button class="btn-icon btn-icon-story md-icon-button" aria-label="icon" ng-click="changeNumberLike(story.id)">
+	     			<img ng-src="{{story.is_liked === 'false' ? '../../img/icon_dislike.png' : '../../img/icon_like.png'}}" class="icon-action icon-action-story"/>
+	     		</md-button>
+	     		<span class="txt-number">{{story.total_like}}</span>
+     		</label>
+     	</div>
+		<div class="action-item">
+			<label>
+				<md-button class="btn-icon btn-icon-story md-icon-button" aria-label="icon" ng-click="showHideComment()">
+					<img ng-src="{{story.is_commented === 0 ? '../../img/icon_no_comment.png' : '../../img/icon_comment.png'}}" class="icon-action icon-action-story"/>
+				</md-button>
+				<span class="txt-number">{{story.total_comment}}</span>
+			</label>
+		</div>
+		<div class="action-item">
+			<label>
+                <md-button class="btn-icon btn-icon-story md-icon-button" aria-label="icon" ng-click="showRepostStory(story.id)">
+					<img ng-src="{{story.reposted_by_me === 'false' ? '../../img/icon_disrepost.png' : '../../img/icon_repost.png'}}" class="icon-action icon-action-story"/>
+				</md-button>
+				<span class="txt-number">{{story.total_repost}}</span>
+			</label>
+		</div>
+
+		<div class="action-item">
+			<label ng-if="story.is_owner === 'false'">
+				<md-button class="btn-icon btn-icon-story md-icon-button" aria-label="icon" ng-click="showReportModal(story.id)">
+					<img ng-src="../../img/icon_report_story.png" class="icon-action icon-action-story"/>
+				</md-button>
+			</label>
+			<!--btn-delete-story-->
+			<label ng-if="story.is_owner === 'true'">
+				<md-button class="btn-icon btn-icon-story md-icon-button " aria-label="icon" 
+					ng-click="showDeleteStoryModal(story.id)">
+					<img ng-src="../../img/icon_delete.png" class="icon-action icon-action-story icon-delete"/>
+				</md-button>
+			</label>
+		</div>
+	</div>
+</div>
+
+<div class="line-separator before"></div>
+<div class="row">
+	<div class="col-xs-12">
+		<div class="hospital-name">
+			<p>{{story.hospital_name}}</p>
+		</div>
+	</div>
+</div>
+<div class="line-separator after"></div>
+<div class="row expanded-story-detail">
+    <div class="col-xs-12 no-pr no-pl">
+       <h1 class="story-title">{{story.story_title}}</h1>
+       <p class="des-story">{{story.story_description}}</p>
+    </div>
+</div>

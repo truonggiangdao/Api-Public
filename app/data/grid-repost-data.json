@@ -1,0 +1,120 @@
+[
+    { 
+        "id": 1, 
+        "category": "Reposted", 
+        "username_reposted": "Patient Reposted",
+        "username": "Patient Somebody",
+        "imageUrl": "../../img/demo_1.jpg", 
+        "title": "Video Title Goes Here for a Two Lined Title Example", 
+        "description": "Photo description goes here. Photo description goes here. Photo description goes here. Photo description goes here. Photo description goes here. Photo description goes here. Photo description goes here. Photo description goes here.",
+        "is_follow" : "false",
+        "is_following" : "false",
+        "btn_following" : "true",
+        "is_owner" : "false",
+        "total_like" : 3
+
+    }, 
+    {
+        "id": 2, 
+        "category": "Reposted", 
+        "username_reposted": "Patient Reposted",
+        "username": "Patient Somebody",
+        "imageUrl": "../../img/demo_1.jpg", 
+        "title": "Video Title Goes Here for a Two Lined Title Example", 
+        "description": "Photo description goes here. Photo description goes here. Photo description goes here. Photo description goes here. Photo description goes here. Photo description goes here. Photo description goes here. Photo description goes here.",
+        "is_follow" : "false",
+        "is_following" : "false",
+        "btn_following" : "true",
+        "is_owner" : "false",
+        "total_like" : 4
+
+    }, 
+    {
+        "id": 3, 
+        "category": "Reposted", 
+        "username_reposted": "Patient Reposted",
+        "username": "Patient Somebody",
+        "imageUrl": "../../img/demo_1.jpg", 
+        "title": "Video Title Goes Here for a Two Lined Title Example", 
+        "description": "Photo description goes here. Photo description goes here. Photo description goes here. Photo description goes here. Photo description goes here. Photo description goes here. Photo description goes here. Photo description goes here.",
+        "is_follow" : "false",
+        "is_following" : "false",
+        "btn_following" : "true",
+        "is_owner" : "false",
+        "total_like" : 5
+
+    }, 
+    {
+        "id": 4, 
+        "category": "Reposted", 
+        "username_reposted": "Patient Reposted",
+        "username": "Patient Somebody",
+        "imageUrl": "../../img/demo_1.jpg", 
+        "title": "Video Title Goes Here for a Two Lined Title Example", 
+        "description": "Photo description goes here. Photo description goes here. Photo description goes here. Photo description goes here. Photo description goes here. Photo description goes here. Photo description goes here. Photo description goes here.",
+        "is_follow" : "false",
+        "is_following" : "false",
+        "btn_following" : "true",
+        "is_owner" : "false",
+        "total_like" : 6
+
+    }, 
+    { 
+        "id": 5, 
+        "category": "Reposted", 
+        "username_reposted": "Patient Reposted",
+        "username": "Patient Somebody",
+        "imageUrl": "../../img/demo_1.jpg", 
+        "title": "Video Title Goes Here for a Two Lined Title Example", 
+        "description": "Photo description goes here. Photo description goes here. Photo description goes here. Photo description goes here. Photo description goes here. Photo description goes here. Photo description goes here. Photo description goes here.",
+        "is_follow" : "false",
+        "is_following" : "false",
+        "btn_following" : "true",
+        "is_owner" : "false",
+        "total_like" : 7
+
+    }, 
+    {
+        "id": 6, 
+        "category": "Reposted", 
+        "username_reposted": "Patient Reposted",
+        "username": "Patient Somebody",
+        "imageUrl": "../../img/demo_1.jpg", 
+        "title": "Video Title Goes Here for a Two Lined Title Example", 
+        "description": "Photo description goes here. Photo description goes here. Photo description goes here. Photo description goes here. Photo description goes here. Photo description goes here. Photo description goes here. Photo description goes here.",
+        "is_follow" : "false",
+        "is_following" : "false",
+        "btn_following" : "true",
+        "is_owner" : "false",
+        "total_like" : 8
+    }, 
+    {
+        "id": 7, 
+        "category": "Reposted", 
+        "username_reposted": "Patient Reposted",
+        "username": "Patient Somebody",
+        "imageUrl": "../../img/demo_1.jpg", 
+        "title": "Video Title Goes Here for a Two Lined Title Example", 
+        "description": "Photo description goes here. Photo description goes here. Photo description goes here. Photo description goes here. Photo description goes here. Photo description goes here. Photo description goes here. Photo description goes here.",
+        "is_follow" : "false",
+        "is_following" : "false",
+        "btn_following" : "true",
+        "is_owner" : "false",
+        "total_like" : 9
+
+    }, 
+    {
+        "id": 8, 
+        "category": "Reposted", 
+        "username_reposted": "Patient Reposted",
+        "username": "Patient Somebody",
+        "imageUrl": "../../img/demo_1.jpg", 
+        "title": "Video Title Goes Here for a Two Lined Title Example", 
+        "description": "Photo description goes here. Photo description goes here. Photo description goes here. Photo description goes here. Photo description goes here. Photo description goes here. Photo description goes here. Photo description goes here.",
+        "is_follow" : "false",
+        "is_following" : "false",
+        "btn_following" : "true",
+        "is_owner" : "false",
+        "total_like" : 10
+    }
+]

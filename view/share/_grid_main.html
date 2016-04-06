@@ -1,0 +1,321 @@
+<div flex layout="column"  class="grid-main" >
+	<div  id="container" masonry="{itemSelector : '.grid-item', columnWidth : '.grid-sizer', transitionDuration: '0.4s' }" flex>
+    <div class="grid-sizer"  />
+    <div class="grid-item masonry-brick" ng-repeat="card in stories">
+    <md-card>
+      <!-- video item -->
+      <div ng-show="card.is_repost === 'false' && card.is_commented === 0 && card.story_type === 'video'" class="item item-video" ng-class="(card.is_repost === 'true' || card.is_commented !== 0) ? 'comment_repost' : ((card.is_healthcare_professional === 'false' || card.is_anonymously === 'true') ? 'patient_anonymous' : 'healthcare_professional')">
+        <md-card-title class="no-padding">
+          <md-card-title-media>
+            <div class="card-media">
+              <md-button class="btn-img btn-video" ng-click="showExpandedStory(card.id)" aria-label="image">
+              	<img ng-src="{{card.avatar_story}}" alt="" class="img-photo"/> 
+              </md-button>
+            </div>
+          </md-card-title-media>
+        </md-card-title>
+        <md-card-content >
+        	<div class="user-info">
+        		<md-button ng-href="#/profile" class="btn-user btn-link" aria-label="img">
+					<img ng-src="{{card.profile_image_url}}" class="img-user img-circle"/> 
+				</md-button>
+				</md-button>
+				<md-button ng-href="#/profile" class="username btn-link">
+					{{card.name}}
+				</md-button>
+			</div>
+			<md-button class="btn-title" ng-click="showExpandedStory(card.id)">
+        		<h6 class="title">{{card.story_title}}</h6>
+        	</md-button>
+			<p class="description">{{card.story_description}}</p>
+        </md-card-content>
+        <div class="line-separator"></div>
+	     <md-card-actions layout="row" layout-align="end center" class="layout-align-end-center layout-row item-action">
+     		<div class="col-md-8 col-sm-8 col-xs-8 no-pr no-pl action-image">
+	     		<div class="action-item">
+	     			<label class="like-{{card.id}}">
+		     			<md-button class="btn-icon md-icon-button" aria-label="icon" ng-click="changeNumberLike(card.id)">
+			     			<img ng-src="{{card.is_liked === 'false' ? '../../img/icon_dislike.png' : '../../img/icon_like.png'}}" class="icon-action "/>
+			     		</md-button>
+			     		<span class="txt-number">{{card.total_like}}</span>
+		     		</label>
+		     	</div>
+				<div class="action-item">
+					<label>
+						<md-button class="btn-icon md-icon-button" aria-label="icon" ng-click="showExpandedStory(card.id)">
+							<img ng-src="{{card.is_commented === 0 ? '../../img/icon_no_comment.png' : '../../img/icon_comment.png'}}" class="icon-action"/>
+						</md-button>
+						<span class="txt-number">{{card.total_comment}}</span>
+					</label>
+				</div>
+				<div class="action-item">
+					<label>
+                        <md-button class="btn-icon md-icon-button" aria-label="icon" ng-click="showRepostStory(card.id)">
+							<img ng-src="{{card.reposted_by_me === 'false' ? '../../img/icon_disrepost.png' : '../../img/icon_repost.png'}}" class="icon-action"/>
+						</md-button>
+						<span class="txt-number">{{card.total_repost}}</span>
+					</label>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-4 col-xs-4 no-pr no-pl txt-right">
+				<md-button class="btn-def follow-{{card.user_id}}" ng-class="'{{card.is_follow}}' === 'true'? 'btn-following' : 'btn-follow'" ng-click="changeStatus($event, card.user_id)" aria-label="img">
+				</md-button>
+			</div>
+	     </md-card-actions>
+       </div>
+		<!-- text item -->
+    	<div ng-show="card.is_repost === 'false' && card.is_commented === 0 && card.story_type === 'text'" class="item item-text" ng-class="(card.is_repost === 'true' || card.is_commented !== 0) ? 'comment_repost' : ((card.is_healthcare_professional === 'false' || card.is_anonymously === 'true') ? 'patient_anonymous' : 'healthcare_professional')">
+	        <md-card-content>
+	          <div class="user-info">
+					<md-button ng-href="#/profile" class="btn-user btn-link" aria-label="img">
+						<img ng-src="{{card.profile_image_url}}" class="img-user img-circle"/> 
+					</md-button>
+					<md-button ng-href="#/profile" class="username btn-link">
+						{{card.name}}
+					</md-button>
+				</div>
+				<md-button class="btn-title" ng-click="showExpandedStory(card.id)">
+        			<h6 class="title">{{card.story_title}}</h6>
+        		</md-button>
+				<p class="description">{{card.story_description}}</p>
+	        </md-card-content>
+			<div class="line-separator"></div>
+	         <md-card-actions layout="row" layout-align="end center" class="layout-align-end-center layout-row item-action">
+		     	<div class="col-md-8 col-sm-8 col-xs-8 no-pr no-pl action-image">
+		     		<div class="action-item">
+		     			<label class="like-{{card.id}}">
+			     			<md-button class="btn-icon md-icon-button" aria-label="icon" ng-click="changeNumberLike(card.id)">
+				     			<img ng-src="{{card.is_liked === 'false' ? '../../img/icon_dislike.png' : '../../img/icon_like.png'}}" class="icon-action "/>
+				     		</md-button>
+				     		<span class="txt-number">{{card.total_like}}</span>
+			     		</label>
+			     	</div>
+					<div class="action-item">
+						<label>
+							<md-button class="btn-icon md-icon-button" aria-label="icon" ng-click="showExpandedStory(card.id)">
+								<img ng-src="{{card.is_commented === 0 ? '../../img/icon_no_comment.png' : '../../img/icon_comment.png'}}" class="icon-action"/>
+							</md-button>
+							<span class="txt-number">{{card.total_comment}}</span>
+						</label>
+					</div>
+					<div class="action-item">
+						<label>
+                            <md-button class="btn-icon md-icon-button" aria-label="icon" ng-click="showRepostStory(card.id)">
+								<img ng-src="{{card.reposted_by_me === 'false' ? '../../img/icon_disrepost.png' : '../../img/icon_repost.png'}}" class="icon-action"/>
+							</md-button>
+							<span class="txt-number">{{card.total_repost}}</span>
+						</label>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-4 col-xs-4 no-pr no-pl txt-right" >
+					<md-button class="btn-def follow-{{card.user_id}}" ng-class="'{{card.is_follow}}' === 'true'? 'btn-following' : 'btn-follow'" ng-click="changeStatus($event, card.user_id)" aria-label="img">
+					</md-button>
+				</div>
+		     </md-card-actions>
+       </div>
+
+       <!-- photo item -->
+       <div ng-show="card.is_repost === 'false' && card.is_commented === 0 && card.story_type === 'photo'" class="item item-photo" ng-class="(card.is_repost === 'true' || card.is_commented !== 0) ? 'comment_repost' : ((card.is_healthcare_professional === 'false' || card.is_anonymously === 'true') ? 'patient_anonymous' : 'healthcare_professional')">
+	        <md-card-title class="no-padding">
+	          <md-card-title-media>
+	            <div class="card-media">
+	            	<md-button class="btn-img" ng-click="showExpandedStory(card.id)" aria-label="image">
+	              		<img ng-src="{{card.images[0].image_url}}" alt="" class="img-photo"/>
+              		</md-button>
+	            </div>
+	          </md-card-title-media>
+	        </md-card-title>
+	        <md-card-content>
+	        	<div class="user-info">
+					<md-button ng-href="#/profile" class="btn-user btn-link" aria-label="img">
+						<img ng-src="{{card.profile_image_url}}" class="img-user img-circle"/> 
+					</md-button>
+					<md-button ng-href="#/profile" class="username btn-link">
+						{{card.name}}
+					</md-button>
+				</div>
+				<md-button class="btn-title" ng-click="showExpandedStory(card.id)">
+	        		<h6 class="title">{{card.story_title}}</h6>
+	        	</md-button>
+				<p class="description">{{card.story_description}}</p>
+	        </md-card-content>
+	        <div class="line-separator"></div>
+		     <md-card-actions layout="row" layout-align="end center" class="layout-align-end-center layout-row item-action">
+		     	<div class="col-md-8 col-sm-8 col-xs-8 no-pr no-pl action-image">
+		     		<div class="action-item">
+		     			<label class="like-{{card.id}}">
+			     			<md-button class="btn-icon md-icon-button" aria-label="icon" ng-click="changeNumberLike(card.id)">
+				     			<img ng-src="{{card.is_liked === 'false' ? '../../img/icon_dislike.png' : '../../img/icon_like.png'}}" class="icon-action "/>
+				     		</md-button>
+				     		<span class="txt-number">{{card.total_like}}</span>
+			     		</label>
+			     	</div>
+					<div class="action-item">
+						<label>
+							<md-button class="btn-icon md-icon-button" aria-label="icon" ng-click="showExpandedStory(card.id)">
+								<img ng-src="{{card.is_commented === 0 ? '../../img/icon_no_comment.png' : '../../img/icon_comment.png'}}" class="icon-action"/>
+							</md-button>
+							<span class="txt-number">{{card.total_comment}}</span>
+						</label>
+					</div>
+					<div class="action-item">
+						<label>
+							<md-button class="btn-icon md-icon-button" aria-label="icon" ng-click="showRepostStory(card.id)">
+								<img ng-src="{{card.reposted_by_me === 'false' ? '../../img/icon_disrepost.png' : '../../img/icon_repost.png'}}" class="icon-action"/>
+							</md-button>
+							<span class="txt-number">{{card.total_repost}}</span>
+						</label>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-4 col-xs-4 no-pr no-pl txt-right" >
+					<md-button class="btn-def follow-{{card.user_id}}" ng-class="'{{card.is_follow}}' === 'true'? 'btn-following' : 'btn-follow'" ng-click="changeStatus($event, card.user_id)" aria-label="img">
+					</md-button>
+				</div>
+		     </md-card-actions>
+       </div>
+
+       <!-- reposted item -->
+       <div ng-show="card.is_repost === 'true'" class="item item-reposted" ng-class="(card.is_repost === 'true' || card.is_commented !== 0) ? 'comment_repost' : ((card.is_healthcare_professional === 'false' || card.is_anonymously === 'true') ? 'patient_anonymous' : 'healthcare_professional')">
+        	<md-card-title class="no-padding">
+	          <md-card-title-media>
+	          	<div class="row reposted-info">
+					<img ng-src="{{card.reposted_by_me === 'false' ? '../../img/icon_disrepost.png' : '../../img/icon_repost.png'}}" class="icon-reposted" /> 
+					<md-button ng-href="#/profile" class="btn-user btn-link" aria-label="img">
+						<img ng-src="{{card.repost_profile_image_url}}" class="img-user img-circle"/> 
+					</md-button>
+					<md-button ng-href="#/profile" class="username btn-link">
+						{{card.repost_username}}
+					</md-button>
+				</div>
+	            <div class="card-media" >
+	            	<md-button class="btn-img" ng-class="{{card.story_type === 'video'}} ? 'btn-video' : ''" ng-click="showExpandedStory(card.id)" aria-label="image"> 
+	              		<img ng-src="{{card.story_type === 'video' ? card.avatar_story : (card.story_type === 'photo' ? card.images[0].image_url : '')}}" alt="" class="img-photo"/>
+              		</md-button>
+	            </div>
+	          </md-card-title-media>
+	        </md-card-title>
+	        <md-card-content>
+	        	<div class="user-info">
+					<md-button ng-href="#/profile" class="btn-user btn-link" aria-label="img">
+						<img ng-src="{{card.profile_image_url}}" class="img-user img-circle"/> 
+					</md-button>
+					<md-button ng-href="#/profile" class="username btn-link">
+						{{card.name}}
+					</md-button>
+				</div>
+				<md-button class="btn-title" ng-click="showExpandedStory(card.id)">
+	        		<h6 class="title">{{card.story_title}}</h6>
+	        	</md-button>
+				<p class="description">{{card.story_description}}</p>
+				
+	        </md-card-content>
+	        <div class="line-separator"></div>
+		     <md-card-actions layout="row" layout-align="end center" class="layout-align-end-center layout-row item-action">
+		     	<div class="col-md-8 col-sm-8 col-xs-8 no-pr no-pl action-image">
+		     		<div class="action-item">
+		     			<label class="like-{{card.id}}">
+			     			<md-button class="btn-icon md-icon-button" aria-label="icon" ng-click="changeNumberLike(card.id)">
+				     			<img ng-src="{{card.is_liked === 'false' ? '../../img/icon_dislike.png' : '../../img/icon_like.png'}}" class="icon-action "/>
+				     		</md-button>
+				     		<span class="txt-number">{{card.total_like}}</span>
+			     		</label>
+			     	</div>
+					<div class="action-item">
+						<label>
+							<md-button class="btn-icon md-icon-button" aria-label="icon" ng-click="showExpandedStory(card.id)">
+								<img ng-src="{{card.is_commented === 0 ? '../../img/icon_no_comment.png' : '../../img/icon_comment.png'}}" class="icon-action"/>
+							</md-button>
+							<span class="txt-number">{{card.total_comment}}</span>
+						</label>
+					</div>
+					<div class="action-item">
+						<label>
+                            <md-button class="btn-icon md-icon-button" aria-label="icon" ng-click="showRepostStory(card.id)">
+								<img ng-src="{{card.reposted_by_me === 'false' ? '../../img/icon_disrepost.png' : '../../img/icon_repost.png'}}" class="icon-action"/>
+							</md-button>
+							<span class="txt-number">{{card.total_repost}}</span>
+						</label>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-4 col-xs-4 no-pr no-pl txt-right" >
+					<md-button class="btn-def follow-{{card.user_id}}" ng-class="'{{card.is_follow}}' === 'true'? 'btn-following' : 'btn-follow'" ng-click="changeStatus($event, card.user_id)" aria-label="img">
+					</md-button>
+				</div>
+		     </md-card-actions>
+		</div>
+
+		<!-- commented item -->
+       <div ng-show="card.is_commented !== 0 && card.is_repost === 'false'" class="item item-commented" ng-class="(card.is_repost === 'true' || card.is_commented !== 0) ? 'comment_repost' : ((card.is_healthcare_professional === 'false' || card.is_anonymously === 'true') ? 'patient_anonymous' : 'healthcare_professional')">
+        	<md-card-title class="no-padding">
+	          <md-card-title-media>
+	          	<div class="row reposted-info">
+					<img ng-src="{{card.is_commented === 0 ? '../../img/icon_no_comment.png' : '../../img/icon_comment.png'}}" class="icon-reposted" /> 
+					<md-button ng-href="#/profile" class="btn-user btn-link" aria-label="img">
+						<img ng-src="{{card.comment_profile_image_url}}" class="img-user img-circle"/> 
+					</md-button>
+					<md-button ng-href="#/profile" class="username btn-link">
+						{{card.comment_user_name}}
+					</md-button>
+				</div>
+	            <div class="card-media">
+	            	<md-button class="btn-img" ng-click="showExpandedStory(card.id)" aria-label="image">
+	              		<img ng-src="{{card.story_type === 'video' ? card.avatar_story : (card.story_type === 'photo' ? card.images[0].image_url : '')}}" alt="" class="img-photo"/>
+              		</md-button>
+	            </div>
+	          </md-card-title-media>
+	        </md-card-title>
+	        <md-card-content>
+	        	<div class="user-info">
+					<md-button ng-href="#/profile" class="btn-user btn-link" aria-label="img">
+						<img ng-src="{{card.profile_image_url}}" class="img-user img-circle"/> 
+					</md-button>
+					<md-button ng-href="#/profile" class="username btn-link">
+						{{card.name}}
+					</md-button>
+				</div>
+				<md-button class="btn-title" ng-click="showExpandedStory(card.id)">
+	        		<h6 class="title">{{card.story_title}}</h6>
+	        	</md-button>
+				<p class="description">{{card.story_description}}</p>
+				
+	        </md-card-content>
+	        <div class="line-separator"></div>
+		     <md-card-actions layout="row" layout-align="end center" class="layout-align-end-center layout-row item-action">
+		     	<div class="col-md-8 col-sm-8 col-xs-8 no-pr no-pl action-image">
+		     		<div class="action-item">
+		     			<label class="like-{{card.id}}">
+			     			<md-button class="btn-icon md-icon-button" aria-label="icon" ng-click="changeNumberLike(card.id)">
+				     			<img ng-src="{{card.is_liked === 'false' ? '../../img/icon_dislike.png' : '../../img/icon_like.png'}}" class="icon-action "/>
+				     		</md-button>
+				     		<span class="txt-number">{{card.total_like}}</span>
+			     		</label>
+			     	</div>
+					<div class="action-item">
+						<label>
+							<md-button class="btn-icon md-icon-button" aria-label="icon" ng-click="showExpandedStory(card.id)">
+								<img ng-src="{{card.is_commented === 0 ? '../../img/icon_no_comment.png' : '../../img/icon_comment.png'}}" class="icon-action"/>
+							</md-button>
+							<span class="txt-number">{{card.total_comment}}</span>
+						</label>
+					</div>
+					<div class="action-item">
+						<label>
+                            <md-button class="btn-icon md-icon-button" aria-label="icon" ng-click="showRepostStory(card.id)">
+								<img ng-src="{{card.reposted_by_me === 'false' ? '../../img/icon_disrepost.png' : '../../img/icon_repost.png'}}" class="icon-action"/>
+							</md-button>
+							<span class="txt-number">{{card.total_repost}}</span>
+						</label>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-4 col-xs-4 no-pr no-pl txt-right" >
+					<md-button class="btn-def follow-{{card.user_id}}" ng-class="'{{card.is_follow}}' === 'true'? 'btn-following' : 'btn-follow'" ng-click="changeStatus($event, card.user_id)" aria-label="img">
+					</md-button>
+				</div>
+		     </md-card-actions>
+		</div>
+
+      </md-card>
+    </div>
+  </div>
+</div>
+

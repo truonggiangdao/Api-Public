@@ -1,0 +1,72 @@
+.report {
+	
+	.content {
+		margin: 0;
+	}
+	
+	.img-report {
+		margin: 0 0 10px 0;
+	}
+
+	.title {
+		color: #4c0055;
+		font-family: "NunitoBold";
+	}
+
+	.lbl-report {
+		color: #000;
+		font: 1.2em "NunitoLight";
+	}
+
+	.chk-report {
+		margin: 10px 0 0;
+	}
+
+	.enter-text{
+		padding: 0 30px;
+	}
+
+	.submit-button {
+		margin: 10px 0;
+	}
+
+	.grp-checkbox {
+	    display: inline-block;
+    	text-align: left;
+	}
+}
+
+textarea {
+	&.txt-report-area {
+		border-radius: 3px;
+	    border: 1px solid #92278f;
+	    margin-top: 15px;
+	    width: 100%;
+	    padding: 10px;
+	    height: 140px;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    textarea {
+		&.txt-report-area {
+			height: 200px;
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+    textarea {
+		&.txt-report-area {
+			height: 180px;
+		}
+	}
+}
+
+@media screen and (max-width: 480px) {
+    textarea {
+		&.txt-report-area {
+			height: 150px;
+		}
+	}
+}

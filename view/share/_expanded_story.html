@@ -1,0 +1,52 @@
+<!-- Modal -->
+<div class="modal fade" id="expandedStoryModal" role="dialog" ng-controller="StoryCtrl">
+	<div class="modal-dialog modal-expanded-story">
+    	<div class="story {{gallery_state}}">
+		 	<div class="row header-content">
+		        <div class="col-xs-12 no-pr no-pl">
+		        	<md-button class="btn-story-single {{ active_single }} {{ hide_state}}" aria-label="icon" ng-click="showStoryModal()">
+					</md-button>
+					<md-button class="btn-story-gallery {{ active_gallery }} {{ hide_state }}" aria-label="icon" ng-click="showStoryGalleryModal()">
+					</md-button>
+					<md-button class="btn-close-modal" aria-label="icon" ng-click="closeExpandedStory()">
+					</md-button>
+		        </div>
+		    </div>
+		    <div class="clear"></div>
+
+		    <div class="row content {{ text_state }}">
+		    	<!-- slider content-->
+		    	<div class="col-xs-12 no-pr no-pl">
+				    <div ng-include="'view/share/_expanded_slider_story.html'"></div>
+				</div>
+
+			    <!-- grid content-->
+			    <div class="col-xs-12">
+			    	<div ng-include="'view/share/_expanded_grid_story.html'"></div>
+		    	</div>
+
+		    </div>
+
+		    <div class="detail-story">
+		    	<div class="detail-story-desktop">
+				    <div ng-include="'view/share/_detail_story_desktop.html'"></div>
+				</div>
+				<div class="detail-story-mobile">
+				    <div ng-include="'view/share/_detail_story_mobile.html'"></div>
+				</div>
+		    </div>
+
+		     <div class="row fb-content" ng-show="showComment">
+			 	<div class="col-xs-12 mb-50">
+			 		<div class="fb-plugin" ng-include="'view/comment.html'"> </div>
+		    	</div>
+		    </div>
+		</div>
+    </div>
+  </div>
+
+  <!--Report story modal-->
+  <div ng-include="'view/share/_report_story.html'"></div>
+
+  <!--Delete story modal-->
+  <div ng-include="'view/share/_delete_story.html'"></div>
